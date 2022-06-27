@@ -1,0 +1,1005 @@
+$!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+$BLOCK NULL -file what_overview.7.html
+<html>
+   <head>
+
+      <meta name="description" content="extract SCCS-style identification strings from a file" />
+      <meta name="author"      content="John S. Urban" />
+      <meta name="keywords"    content="metadata,Fortran,what,SCCS id,ident,data about data" />
+      <!-- @(#) what(1f): extract SCCS-style identification strings from a file
+      -->
+
+      <title> what.f90 </title>
+      <link title="Stylesheet" href="StyleSheets/Swiss.css" type="text/css" rel="stylesheet">
+      <!--
+      -->
+      <link rel="stylesheet"           href="StyleSheets/Chocolate.css"   type="text/css"  title="Chocolate"    />
+      <link rel="alternate stylesheet" href="StyleSheets/Midnight.css"    type="text/css"  title="Midnight"     />
+      <link rel="alternate stylesheet" href="StyleSheets/Modernist.css"   type="text/css"  title="Modernist"    />
+      <link rel="alternate stylesheet" href="StyleSheets/OldStyle.css"    type="text/css"  title="OldStyle"     />
+      <link rel="alternate stylesheet" href="StyleSheets/Steely.css"      type="text/css"  title="Steely"       />
+      <link rel="alternate stylesheet" href="StyleSheets/Swiss.css"       type="text/css"  title="Swiss"        />
+      <link rel="alternate stylesheet" href="StyleSheets/Traditional.css" type="text/css"  title="Traditional"  />
+      <link rel="alternate stylesheet" href="StyleSheets/Ultramarine.css" type="text/css"  title="Ultramarine"  />
+      <link rel="alternate stylesheet" href="StyleSheets/fortran.css"     type="text/css"  title="Local"        />
+      <style>
+      </style>
+   </head>
+<body>
+<a href="../../../GPF.html"><img title="return to libGPF library home page" alt="libGPF Home Page" src="images/compass.png"> </a>
+<h1> Extracting File Identification Data (metadata) from files with what(1) </h1>
+
+<p>
+   If you need the
+   <a href="what.1.html">what(1)</a>
+   command but it is not available on your platforms,
+   <a href="download.html"> this download </a>
+   contains a Fortran-based version in source form.
+</p>
+
+<h2> What is what(1)? </h2>
+
+<p>
+   What does the what(1) command do? It lets you extract descriptions of
+   files from almost any file type if you place the data in the files
+   using a simple standard convention.  This metadata would usually
+   include such information as a short description of the file, an author
+   or originator, a version number, and a revision date.  The what(1)
+   command lets you see that metadata even when making a query from
+   a non-compatible system -- without having to execute applications
+   (such as a --help or --version switch on an executable command might
+   provide).
+</p>
+
+<p>
+   That is, just as you use the file(1) command along with  magic(5)
+   strings in your files to identify what types of files you have, you
+   can use the what(1) command to see file-specific information that
+   has been placed in the file.
+</p>
+
+<p>
+   More specifically, the what(1) command searches through files to find
+   "SCCS identification strings". An SCCS identification string begins
+   with "@(#)" and continues until a non-printable character (including
+   a new-line) is found, or one of the following characters are found:
+   ", &gt; or \,
+</p>
+
+<h2> Try it </h2>
+
+<p>
+   To get a taste for the power of such a standard as the SCCS
+   identification string, take a directory with some simple scripts or
+   source files in it, enter a short description in a comment of the form
+</p>
+
+<pre>
+       @(#)name - short description
+</pre>
+
+<p>
+   in the script files, and then use what(1) or even "grep '@(#)' *"
+   on the directory.  you will get a taste of why adapting a standard
+   description key such as '@(#)' is useful.
+</p>
+
+<p>
+   If  you have built the what(1) command contained in this document,
+   you can display a nicely formatted display in most terminal windows
+   using a command like ...
+</p>
+
+<pre>
+   cd scripts_programming
+   # generate HTML and format it in a terminal window with w3m(1) (or links(1), lynx(1), ...)
+   what * -html -q|w3m -dump -T text/html|more
+</pre>
+
+<img src="images/what.gif">
+
+<p>
+   Or, you could redirect the output into a file and launch a browser
+   to see the file. A sample output run in a small directory of bash(1)
+   shell scripts follows (<em>Note that the files are created as links
+   so you could normally click on the files)</em>):
+</p>
+
+<table border="1" style="border-style: solid;">
+<tbody border="1" style="border-style: solid;">
+<tr><td>ccall</td>
+<td>
+        ccall.sh 1.10 compile,load and install  a main program
+        (C,C++,Fortran, man page, ..). Aware of many programming
+        environments.<br/>
+</td>
+<tr><td>errno</td>
+<td>
+      Display C error message 'ENAME' corresponding to number or all
+      'ENAME's if no number specified.<br/>
+</td>
+<tr><td>f2f</td>
+<td>
+         call f2f.pl script; which updates F77 with some F90 syntax<br/>
+</td>
+<tr><td>f90doc</td>
+<td>
+         f90doc(1) wrapper<br/>
+</td>
+<tr><td>f90tohtml</td>
+<td>
+         call f90tohtml to convert Fortran source to HTML<br/>
+</td>
+<tr><td>fb90</td>
+<td>
+         Use emacs(1) to auto-ident free-form Fortran files like cb(1) for C<br/>
+</td>
+<tr><td>fileinfo</td>
+<td>
+         do an ls(1), file(1), what(1), numdiff(1), size(1), ar(1) and ldd(1) on a file <br/>
+</td>
+<tr><td>fmkmf</td>
+<td>
+        This is a utility to generate make files for Fortran 90. <br/>
+</td>
+<tr><td>generate_make</td>
+<td>
+         Program to generate Makefile from *.f and *.f90 files found in the current working directory.<br/>
+</td>
+<tr><td>html2C</td>
+<td>
+        html2C.sh  Strip C from a specially formatted  HTML-2 document : 1.0  19960517 John S. Urban<br/>
+</td>
+<tr><td>html2f</td>
+<td>
+         Strip FORTRAN from specially-formatted HTML document (1.0 19960517 John S. Urban)<br/>
+</td>
+<tr><td>html2f90</td>
+<td>
+        Strip FORTRAN90 from specially-formatted HTML document(1.0 19960517 John S. Urban)<br/>
+</td>
+<tr><td>html2py</td>
+<td>
+        Strip python from specially-formatted HTML document(1.0 20150113 John S. Urban)<br/>
+</td>
+<tr><td>ldds</td>
+<td>
+         recursive list of dynamic library loads<br/>
+</td>
+<tr><td>makemake</td>
+<td>
+         Generate a Makefile from the sources in the current directory.
+         The source files may be in either C, FORTRAN 77, Fortran 90 or
+         some combination of these languages. <br/>
+         Usage: makemake [program_name [F90 compiler or fc or f77 or cc or c]]<br/>
+</td>
+<tr><td>manf</td>
+<td>
+         edit the Fortran reference manual in text form<br/>
+</td>
+<tr><td>myflint</td>
+<td>
+         run flint(1) if you have it, or use compiler to emulate it as
+         much as possible (flint(1) is a Fortran code static checker)<br/>
+</td>
+</tbody>
+</table>
+
+<h2> Background </h2>
+
+<h3>what(1) came with SCCS</h3>
+<p>
+   The what(1) command originated as a part of the source code management
+   system SCCS.  When SCCS was the dominant source code management system,
+   the SCCS ID strings automatically generated by the SCCS get(1) command
+   and displayed by the what(1) command became a de-facto standard.
+</p>
+
+<h3>what(1) was used outside of SCCS</h3>
+<p>
+   Importantly, because the what(1) command was so useful it was frequently used outside of SCCS.
+</p>
+
+<h3>what(1) was everywhere, but is often not found by default on systems today</h3>
+<p>
+   So the what(1) command was available pre-installed on most Unix
+   platforms for years, as SCCS was once nearly ubiquitous. Unfortunately,
+   the what(1) command is getting harder to find, as the use of SCCS on
+   Linux platforms is not all that common.  You can typically install SCCS
+   or a SCCS-like program that comes with what(1) but that is overkill
+   if all you want is what(1). (This is particularly true if you do not
+   use code history utilities, or are already using an alternative (RCS,
+   SVN, git(1), hg(1), ...).
+</p>
+
+<h2> Are there alternatives? </h2>
+
+<p>
+   regrettably no strongly supported standard for embedding descriptive
+   information into (almost) all file types (especially object files,
+   libraries, executables and binary data files) has emerged as the
+   availability of the what(1) command has declined.
+</p>
+
+<p>
+   The related ident(1) command is really part of RCS, and so suffers
+   from the same availability issues as what(1).
+</p>
+
+<p>
+   The C/C++ "#ident" and "#pragma ident" directives try to provide similar
+   functionality for C, but implementation varies (a lot) between different
+   PE(Programming Environments), and this feature only works for C/C++ code.
+</p>
+
+
+<h2> SCCS ID strings can be used for more than metadata</h2>
+
+<p>
+   Such a standard as the SCCS identification string provides is
+   indispensable for building utilities that allow you to universally
+   track the pedigree of files.  It lets you embed keys that a system
+   of other custom utilities can then use to  automatically generate
+   file inventories; create indices for software source files, and
+   tie information together via a database that lets you track project
+   releases even when sources are in a variety of languages (Fortran,
+   C/C++, bash, perl, python, javascript, HTML, ...) maintained with
+   a variety of revision control products. That is, essentially every
+   source code and critical data file has a lot of information embedded
+   in it, including a unique key that can be used with a centralized
+   database that lets you quickly tie a file to documentation, contact
+   information, revision history, and so on.
+</p>
+
+<p>
+   Such stringent tracking requirements are rare, but it is still nice
+   to cd(1) into a directory of scripts, code, and binaries and get
+   a quick TOC(Table of Contents) just by entering something like the
+   what(1) command.
+</p>
+
+<h2> Alternate Fortran Source for what(1) </h2>
+
+<p>
+   There are other sources for the original what(1) command or
+   look-alikes.  My own version is written in Fortran. The major
+   difference between it and the original is that it can generate
+   HTML output. It is a PD (Public Domain) source. It has been
+   tested with gfortran( GNU Fortran (GCC) 4.9.3). It displays user
+   documentation with the  --help switch. So you need to grab the
+   <a href="download.html"> WHAT code and  M_KRACKEN,
+   M_STRINGS, and M_VERIFY Fortran modules</a> from this site as well to
+   build the application.
+</p>
+
+$BLOCK
+$!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+$IFDEF TESTPRG90
+!-----------------------------------------------------------------------------------------------------------------------------------
+program pedigree                               ! display file metadata embedded using SCCS identification strings
+use M_CLI2, only: set_args, lget, filename=>unnamed           ! command argument parser
+use M_strings, only: split, substitute
+use M_verify,   only: stderr, debug
+implicit none
+! could add search for '$keyword: description$' as used by RCS too. See ident(command)
+! the sequence @(#) originated with SCCS (probably). See SCCS what(1) command
+
+character(len=*),parameter :: ident="@(#) what(1f): extract SCCS-style identification strings from a file"
+
+character(len=256)              :: message     ! message field for returned messages
+logical             :: stop_on_first = .FALSE. ! switch to show only first string found or all
+logical             :: html          = .FALSE. ! switch to output as an HTML document with a table
+logical             :: table         = .FALSE. ! switch to output as an HTML table
+logical             :: quiet         = .FALSE. ! switch to suppress error messages
+integer             :: fd                      ! file descriptor for file currently being read
+integer             :: found = 0               ! command return status
+integer             :: ios                     ! hold I/O error flag
+integer             :: i                       ! loop counter
+character(len=:),allocatable :: help_text(:)
+character(len=:),allocatable :: version_text(:)
+!-----------------------------------------------------------------------------------------------------------------------------------
+! define command arguments and parse command line
+call setup()
+call set_args('-single:s F --html:H F --table:t F --debug F',help_text,version_text)
+!-----------------------------------------------------------------------------------------------------------------------------------
+debug=lget('debug')                       ! get value of command line switch -debug
+html=lget('html')                         ! get value of command line switch -html
+table=lget('table')                       ! get value of command line switch -table
+quiet=lget('verbose')                     ! get value of command line switch -q to switch whether to report error messages
+!-----------------------------------------------------------------------------------------------------------------------------------
+stop_on_first=lget('single')              ! if selected on command line, only display one string per file
+!-----------------------------------------------------------------------------------------------------------------------------------
+if(size(filename).eq.0)then
+   filename=['-']
+endif
+!-----------------------------------------------------------------------------------------------------------------------------------
+
+if(html)then                                       ! if html output is selected print beginning of a simple HTML document
+   write(*,'(a)')'<html><head><title></title></head><body><table border="1">'
+elseif(table)then
+   write(*,'(a)')'<table border="1">'
+endif
+
+FILES: do i=1,size(filename)                       ! step thru filenames to scan
+   if(filename(i).eq.'-'.or.filename(i).eq.'')then ! input file is standard input, but currently cannot be opened as a stream
+      fd=5
+   else                                            ! open stream file
+      fd=10
+      !-------- KLUDGE TO GET AROUND ERROR IN gfortran GNU Fortran (GCC) 4.9.3 20150826
+      !-------- Get no error on opening files like directories, but then a READ crashes
+      !-------- Open as regular file
+      open(unit=fd,file=trim(filename(i)),status='old',iostat=ios,iomsg=message)
+      if(ios.ne.0)then
+         if(.not.quiet)then
+            call stderr('error: could not open '//trim(filename(i)))
+            call stderr('error: '//trim(message))
+         endif
+         close(unit=fd,iostat=ios)
+         cycle FILES
+      else
+         close(unit=fd,iostat=ios)
+      endif
+      !--------
+      open(unit=fd,file=trim(filename(i)),access='stream',status='old',iostat=ios,action='read',form='unformatted',iomsg=message)
+      if(debug)then
+         write(*,*)'*what* open unit=',fd,'i= ',i,' file=',trim(filename(i)),'iostat=',ios
+      endif
+      if(ios.ne.0)then
+         if(.not.quiet)then
+            call stderr('error: could not open '//trim(filename(i)))
+            call stderr('error: '//trim(message))
+         endif
+         if(debug)then
+            write(*,*)'*what* close on bad open unit=',fd,'iostat=',ios
+         endif
+         flush(unit=fd,iostat=ios)
+         close(unit=fd,iostat=ios)
+         cycle FILES
+      endif
+   endif
+   if(html.or.table)then
+      write(*,'(3a)',advance='no') '<tr><td><a href="',trim(filename(i)),'">'
+      write(*,'(a,"</a></td>")') trim(filename(i))
+   else
+      if(stop_on_first)then
+         write(*,'(a,":")',advance='no')trim(filename(i))
+      else
+         write(*,'(a,":")',advance='yes')trim(filename(i))
+      endif
+   endif
+   found = found + process_file()
+   if(debug)then
+      write(*,*)'*what* close unit=',fd,'iostat=',ios
+   endif
+   flush(unit=fd,iostat=ios)
+   close(unit=fd,iostat=ios)
+enddo FILES
+if(html)then
+   write(*,'(a)')'</table></body></html>'
+elseif(table)then
+   write(*,'(a)')'</table>'
+endif
+select case (found)
+case(:0) ; stop ! 1
+case(1:) ; stop
+end select
+!-----------------------------------------------------------------------------------------------------------------------------------
+contains
+!-----------------------------------------------------------------------------------------------------------------------------------
+subroutine setup()
+implicit none
+
+
+$BLOCK VARIABLE -varname help_text -file what.1.man
+NAME                                                                            
+     what(1f) - [DEVELOPER] extract SCCS-style metadata from a file             
+     (LICENSE:PD)                                                               
+                                                                                
+SYNOPSIS                                                                        
+     what [ filename(s) [ -s] [ -q] [ -html|-table] ] | [ [ -help] [ -version] ]
+                                                                                
+DESCRIPTION                                                                     
+     The what(1) utility searches each filename for occurrences of the          
+     SCCS identification string @### and prints what follows up to a            
+     ",>,\, or any non-printable ASCII character(NULL,NEWLINE,TAB,.....).           
+                                                                                
+     This allows files to quickly be scanned for metadata such as simple        
+     descriptions, versions and pedigree placed in the files.                   
+                                                                                
+OPTIONS                                                                         
+     The following options are supported:                                       
+                                                                                
+     -single, -s    Stops after the first occurrence of the pattern in each file.    
+     --html, -H     Print output as a table in an HTML document.                     
+     --table, -t    Print output as a HTML table.                                    
+     --verbose, -q  Quiet mode (do not report errors when opening filenames)         
+     --help, -h     Print description of this program.                               
+     --version, -v  Print version information for this program                       
+                                                                                
+EXAMPLES                                                                        
+     Example 1: Extracting SCCS version information                             
+                                                                                
+     Text files are generally easy to place a @### string into by using the     
+     appropriate format for a comment in the language being used.               
+     Exactly how to place a string into an object file or executable may        
+     vary depending on your compiler or optimization level. Generally the       
+     following strings will work:                                               
+       o C/C++    #ident "@###identification info"                              
+       o C:       char sccsid[] = "@###identification info"                     
+                  /* must be global scope or optimization usually removes it */ 
+       o C++:     #pragma ident "@###identification info"                       
+                  /* many references say this should work, but unreliable */    
+       o Fortran: character(len=*),parameter::sccsid= @###identification info 
+                  be careful it is not removed by high optimization levels      
+                                                                                
+     For example, if program.f90 were compiled to yield program.o and           
+     executable a.out, the command:                                             
+        what program.f90 program.o a.out                                        
+     should produce:                                                            
+                                                                                
+        program.f90:                                                            
+              identification info                                               
+        program.o:                                                              
+              identification info                                               
+        a.out:                                                                  
+              identification info                                               
+                                                                                
+     A few tips for common interpreted file types:                              
+       o shell script:  #@###identification info                                
+       o HTML:   <!--"@###identification info"-->                               
+                                                                                
+EXIT STATUS                                                                     
+     The following exit values are returned:                                    
+        0     Any matches were found.                                           
+        1     No matches found.                                                 
+                                                                                
+ENVIRONMENT VARIABLES                                                           
+
+AUTHOR                                                                          
+     John S. Urban                                                              
+LICENSE                                                                         
+     Public Domain                                                              
+                                                                                
+SEE ALSO                                                                        
+   The following commands can help identify file contents                       
+     file(1), strings(1), nm(1), ldd(1), cpp(1), fpp(1),                        
+     ident(1), ar(1), objdump(1), ranlib(1),                                    
+     [if SCCS installed ] sccs(1), sccs-admin(1), sccs-get(1), ...              
+                                                                                
+   Related topics: schema, IDL (Information Description Language), ...          
+                                                                                
+BUGS                                                                            
+     There is a remote possibility that a spurious occurrence of the "@###"     
+     pattern could be found by what(1).                                         
+                                                                                
+     If standard input is processed it must be a text file with line width less 
+     than 4,096 characters or errors may occur.                                 
+                                                                                
+     The length of the file arguments may be limited depending on what          
+     command-line argument parser is used.                                      
+$BLOCK
+!-----------------------------------------------------------------------------------------------------------------------------------
+!  strings contain prefix @(#) and suffix " so strings should show up via what(1) command; trimmed when printed by this procedure
+!  NOTES:
+!  developer-supplied information (usually)
+!  Reference: Dublin Core Metadata Element Set (supplemented)
+
+!  used to tie this code (and compilation) to a unique key that can be used in QA records, as a database key, ...
+!  for IDENTIFIER depending on what key type you use, it may be able to extract the time the key was generated from the key value
+
+!  typical STATUS valus ar development, test, production
+!  DATE    can be of various types, such as creation, modification, registration
+
+!  OTHERS:
+!  Birth        : 2015-07-12 12:24:04 Change: 2015-07-19 23:33:46
+
+!  compilation host:
+!  ORIGIN is typically stat(3c)/stat(1),file(1),ls(1) info. at time of compilation, might need INCLUDE/MODULE/PREPROCESSOR use
+
+!  SOURCE IS typically cpp(1) macro __FILE__
+
+!-----------------------------------------------------------------------------------------------------------------------------------
+$BLOCK VARIABLE -varname version_text
+@(#)TITLE            :: what(1f)>
+@(#)DATE             :: 2015/07/17  1:23:28 PM>
+@(#)DESCRIPTION      :: extract SCCS-style metadata from files>
+@(#)SUBJECT          :: metadata,SCCS identification string>
+@(#)TYPE             :: executable command>
+@(#)IDENTIFIER       :: VERSION=2.0.0 UUID=cc787735-fed2-42d3-8cb2-515ea7599873>
+@(#)STATUS           :: PRODUCTION 20160202>
+@(#)CREATOR          :: John S. Urban>
+@(#)PUBLISHER        :: CONTACT=urbanjost@comcast.net>
+@(#)CONTRIBUTOR      :: >
+@(#)RIGHTS           :: Public Domain>
+@(#)FORMAT           :: Fortran program>
+@(#)SOURCE           :: LIBRARY/libGPF/EXE/WHAT/what.FF>
+@(#)LANGUAGE         :: english>
+@(#)RELATION         :: ISO/IEC DIS 9945-2:1992, Information technology - POSIX-Part 2: Shell and Utilities>
+@(#)COVERAGE         :: ORIGIN=Pennsylvania,USA ORIGIN_TGN=7007710>
+@(#)ORIGIN           :: CYGWIN_NT-6.3 buzz 2.0.3(0.287/5/3) 2015-06-03 13:57 x86_64 Cygwin> !uname(3c)>
+$BLOCK
+end subroutine setup
+!-----------------------------------------------------------------------------------------------------------------------------------
+function process_file() RESULT (ifound_total_back)
+! @(#)process_file - process the supplied file as a stream, and write output to stdout.
+   implicit none
+   integer,save       :: ifound_total=0          ! total number of SCCS ID strings found in current program execution
+   integer            :: ifound_total_back       ! copy of ifound_total returned (one compiler confused by returning saved value)
+   character          :: c                       ! current character read
+   integer,parameter  :: got_nothing=0, got_at=1, got_open=2,got_hash=3,got_all=4
+   integer            :: status                  ! use to determine if found SCCS ID string
+   integer            :: ios                     ! hold I/O error flag
+   integer            :: icount                  ! number of characters read from file
+   integer            :: ifound_in_this_file     ! number of SCCS ID strings found in current file
+   logical            :: reset
+
+   status = got_nothing                          ! what part of @(#) found so far
+   icount=0                                      ! number of characters read in this file
+   ifound_in_this_file=0                         ! number of ID strings found in this file
+   reset=.true.
+
+   if(html.or.table)then                         ! if writing a table write out HTML
+      write(*,'(a)')'<td>'
+   endif
+
+   LOOK_FOR_PREFIX: do                           ! loop through read of file one character at a time
+
+      select case(fd)
+      case(5)                                    ! cannot find a way to read from pre-assigned stdin as a stream so far in Fortran
+         read(*,'(a1)',iostat=ios,advance='no') c   ! read stdin with non-advancing I/O as next-best approach
+         if(is_iostat_eor(ios))then              ! if get end-of-record status pretend got char(10) from a stream
+            c=char(10)
+            ios=0
+         endif
+      case default                               ! read character from stream
+         call getnextchar(fd,c,ios,reset)
+         !read(fd,iostat=ios) c
+      end select
+
+      if( ios.ne.0 )exit LOOK_FOR_PREFIX         ! stop on error or end-of-file
+
+      icount=icount+1                            ! increment count of characters read
+
+      select case(c)
+      case('@')
+         status = got_at
+      case('(')
+         if (status == got_at) status = got_open
+      case('#')
+         if (status == got_open) status = got_hash
+      case(')')
+         if (status == got_hash) then           ! got all of prefix so start outputting characters
+            status=got_all
+                                                ! Output tab and ident string followed by a new line.
+            ifound_total = ifound_total + 1
+            ifound_in_this_file = ifound_in_this_file + 1
+            write(*,'(a)',advance='no')achar(9) ! output tab before string being found
+            if(debug)then
+               write(*,*)'*process_file*: FOUND METADATA STARTING AT ICOUNT =',ICOUNT
+            endif
+            OUTPUT: do
+
+               if(fd.eq.5)then
+                  read(*,'(a1)',iostat=ios,advance='no') c
+                  if(is_iostat_eor(ios))then
+                     c=char(10)
+                    ios=0
+                  endif
+               else
+                  call getnextchar(fd,c,ios,reset)
+                  !read(fd,iostat=ios) c
+               endif
+
+               if( ios.ne.0)then
+                   exit LOOK_FOR_PREFIX
+               endif
+
+               icount=icount+1
+
+               select case(c)
+               case('"','>','\')
+                  exit OUTPUT
+               case(:achar(31),achar(127):)     ! end on non-printable character
+                  exit OUTPUT
+               case default
+                  write(*,'(a)',advance='no')c
+               end select
+
+            enddo OUTPUT
+
+            if(html.or.table)then
+               write (*, '(a)')'<br/>'          ! newline
+            else
+               write(*,*)                       ! newline
+            endif
+
+            if (stop_on_first)then
+               exit LOOK_FOR_PREFIX
+            endif
+
+         endif
+     case default
+        status = got_nothing                    ! start looking for new prefix
+     end select
+
+   enddo LOOK_FOR_PREFIX
+
+   if(html.or.table)then
+      write(*,'(a)')'</td>'
+   endif
+
+   if(ifound_in_this_file.eq.0.and.stop_on_first)then       ! need a line advance because no SCCS ID string found
+      write(*,*)
+   endif
+
+   if(debug)then
+      write(*,*)'*process_file*: ICOUNT       =',ICOUNT
+      write(*,*)'*process_file*: STOP_ON_FIRST=',STOP_ON_FIRST
+      write(*,*)'*process_file*: STATUS       =',STATUS
+      write(*,*)'*process_file*: FOUND        =',FOUND
+   endif
+
+   ifound_total_back=ifound_total
+
+end function process_file
+!-----------------------------------------------------------------------------------------------------------------------------------
+subroutine getnextchar(fd,c,ios,reset)
+! replace "read(fd,iostat=ios) c" because gfortran on CygWin sixty times slower with plain read (no system buffering?)
+! quick buffering read
+implicit none
+
+integer,intent(in)          :: fd
+character,intent(out)       :: c
+integer,intent(out)         :: ios
+logical,intent(inout)       :: reset
+
+!integer,parameter           :: bufsize=65536
+integer,parameter           :: bufsize=1048576
+character(len=1),save       :: buff(bufsize)
+integer,save                :: point=0
+integer,save                :: filepoint=1
+integer,save                :: sz=bufsize
+
+ios=0
+
+if(reset)then
+   filepoint=1
+   point=0
+   reset=.false.
+   buff=' '
+   sz=bufsize
+   if(debug)then
+           write(*,*)'*getnextchar* reset'
+   endif
+endif
+
+100 continue
+select case(point)
+case(0)                                            ! read a buffer
+   read(fd,iostat=ios,pos=filepoint) buff(1:sz)
+   if(is_iostat_end(ios))then                      ! this is the last buffer
+      if(sz.ne.1)then                              ! try again with a smaller buffer
+         sz=sz/2
+         sz=max(1,sz)
+         goto 100
+      endif
+   elseif(ios.eq.0)then                            ! no error occurred so successfully read a buffer
+      c=buff(1)
+      filepoint=filepoint+sz
+      point=sz-1
+   endif
+case(1:)                                           ! getting a character from a previous buffer
+   point=point-1
+   c=buff(sz-point)
+case default
+   write(*,*)'*getnextchar* internal error '
+   read(fd,iostat=ios) c
+end select
+! assume if IOS is not zero, not called again until new file is started
+!write(*,*)'JSU: BOT ['//c//'] POINT=',point,' IOS=',ios,' FILEPOINT=',filepoint
+   if(ios.ne.0)then
+      filepoint=1
+      point=0
+      sz=bufsize
+   endif
+end subroutine getnextchar
+!-----------------------------------------------------------------------------------------------------------------------------------
+end program pedigree
+!-----------------------------------------------------------------------------------------------------------------------------------
+$ENDIF
+$!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+$BLOCK NULL -append -file what_overview.7.html
+<h3>Footnotes</h3>
+
+<p>
+   Pure metadata is information not used by the system to use the file.
+   Metadata (metacontent) is typically defined as the data providing information
+   about one or more aspects of the data, such as:
+</p>
+
+<ul>
+   <li> Means of creation of the data                             </li>
+   <li> Purpose of the data                                       </li>
+   <li> Time and date of creation                                 </li>
+   <li> Creator or author of the data                             </li>
+   <li> Location on a computer network where the data was created </li>
+</ul>
+
+<h3> Embedding metadata into executables at compile time </h3>
+
+<p>
+  It is typically easy to embed SCCS ID strings into text files, often as comments
+  in interpreted files. Compiled programs can be more difficult, as unused strings
+  are often eliminated by compilers during optimization. The help text for the
+  what(1) command gives some tips on working with compiled files.
+</p>
+
+
+<p>
+  It is not too difficult to locate and change the metadata string without
+  otherwise changing the file (this will typically work even with binary
+  files). But some files contain checksums or for other reasons cannot
+  easily be changed once created. So if you want to track and update
+  file data that is subject to frequent change consider including a
+  "signature" in the sense of a UUID (Universally Unique ID); and keeping
+  the metadata that has changed in a repository such as an SQLite file.
+  This is particularly useful if ownership or contact information,
+  or production status changes frequently, for example.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+   The original Dublin Core Metadata Element Set consists of 15 metadata
+   elements:
+</p>
+
+<ol>
+   <li>  Title        </li>
+   <li>  Creator      </li>
+   <li>  Subject      </li>
+   <li>  Description  </li>
+   <li>  Publisher    </li>
+   <li>  Contributor  </li>
+   <li>  Date         </li>
+   <li>  Type         </li>
+   <li>  Format       </li>
+   <li>  Identifier   </li>
+   <li>  Source       </li>
+   <li>  Language     </li>
+   <li>  Relation     </li>
+   <li>  Coverage     </li>
+   <li>  Rights       </li>
+</ol>
+
+<p>
+   Wikipedia contains links to more information on the intended meanings of the
+   keywords.
+</p>
+
+<p>
+   MSWindows executable metadata includes the names:
+</p>
+
+<ol>
+   <li> CompanyName </li>
+   <li> FileDescription </li>
+   <li> FileVersion </li>
+   <li> InternalName </li>
+   <li> LegalCopyright </li>
+   <li> OriginalFileName </li>
+   <li> ProductName </li>
+   <li> ProductVersion </li>
+</ol>
+
+<p>
+   Other common metadata formats include EXIF, GPS, and IPTC.
+</p>
+
+<p>
+  Embedding metadata into executable and relocatable files is currently very dependent
+  on the programming environment. When investigating how best to include metadata into
+  such files note that ELF-format files have a metadata section, and many compiled file
+  formats contain a fixed-string section which is often where metadata is stored.
+</p>
+<h3>Using cpp(1) to build an SCCS ID </h3>
+
+<p>
+   Most Fortran programming environments will process source files through the
+   cpp(1) program or very similar pre-processors if the source files end in
+   ".F90". You may have a Fortran-friendly pre-processor where you do
+   not have to be as careful with quotes and double-slashes ("//"); but
+   even using cpp(1) (which was designed for C and/or C++) you can use
+   the pre-defined __FILE__, __DATE__, __TIME__ macros and the -D switch
+   on cpp(1) to "automatically" generate an up-to-date SCCS ID string.
+   For example:
+</p>
+
+<PRE>
+!===================================================================================================================================
+program testit
+implicit none
+! INFO string might be optimized away if not &quot;used&quot;
+! uses (predefined) cpp(1) preprocessor macros;
+! assumes used -DVERSION='&quot;VALUE&quot;' preprocessor switch
+character(len=:),parameter ::info='&lt;@(#)'/&amp;
+   &amp;/__FILE__/&amp;
+   &amp;/'::'/&amp;
+   &amp;/__DATE__/&amp;
+   &amp;/' '/&amp;
+   &amp;/__TIME__/&amp;
+   &amp;/'::V'/&amp;
+   &amp;/VERSION/&amp;
+   &amp;/'&gt;'
+write(*,*)'Hello World!'
+write(*,*)info
+end program testit
+!===============================================================================
+! $ gfortran -DVERSION='&quot;1.2.3&quot;' cpp.F90 -o a.out # note quoting for VERSION
+! $ ./a.out                                       # execute program
+!  Hello World!
+!  &lt;@(#)cpp.F90::Feb  1 2016 20:00:04::V1.2.3&gt;
+! $ what a.out                                    # Run what(1) command on executable
+! a.out:
+!         cpp.F90::Feb  1 2016 20:00:04::V1.2.3
+!===================================================================================================================================
+</PRE>
+
+<h3>Mixing what(1) and ar(1) output when looking at lib*.a files</h3>
+
+<p>
+   The ar(1) command lets you see what files are in an archive file, which is typically
+   the format static libraries take. A simple script lets you combine the output from ar(1)
+   and what(1):
+</p>
+
+<PRE>
+#!/bin/sh
+#@(#)arwhat.sh:run what(1) on each record in an archive file individually
+for NAME in $*
+do
+   ar t $NAME|while read FILE
+   do
+      echo \
+      ==========================================================================================
+      echo $(ar tv $NAME $FILE)
+      ar  p $NAME $FILE|what
+   done
+done
+exit
+$BLOCK
+$!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+$IFDEF UFPP_TEST
+Tests, Examples and Utility Programs
+
+    This section is input for the <a href="ufpp.html">ufpp</a>(1) preprocessor.
+    It runs tests on the module.   It  uses  ccall(1)  to  compile,  load,  and
+    install  executables  in  the  current  command search path; the goodbad(1)
+    command to put test scores into an SQLite database file; and assumes common
+    GNU utilities and the bash(1) shell are available on the system.
+    
+    That being said, the way ufpp(1) works you can easily extract the following
+    unit tests into scripts and program sources if you do  not  use  a  similar
+    build environment.
+
+$SYSTEM goodbad what start -section 1
+$!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+$SYSTEM mkdir -p tmp
+$SYSTEM rm -ff tmp/_expected_test.txt tmp/_testin.txt tmp/_testout.txt tmp/_expected_test.uu
+$!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+ Extract documentation sections and place them in a flat-text man(1) page
+$SYSTEM [ "$UFPP_DOCUMENT_DIR" != '' ] && what --help > $UFPP_DOCUMENT_DIR/doc/what.1.man || echo later
+ Install man(1) page
+$SYSTEM [ "$UFPP_DOCUMENT_DIR" != '' ] &&         ccall $UFPP_DOCUMENT_DIR/doc/what.1.man || echo later
+$!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+ Generate test input file
+$OUTPUT tmp/_testin.txt
+================================================================================
+before@(#) Line terminated
+Arbitrary text
+before@(#) Tab terminated       after tab
+Arbitrary text
+before@(#) double-quote terminated "after double-quote
+Arbitrary text
+before@(#) greater-than terminated >after >
+Arbitrary text
+before@(#) backslash terminated  \after \
+Arbitrary text
+before@(#) null terminated  after null
+Arbitrary text
+================================================================================
+$OUTPUT
+$SYSTEM chmod a=r,u+w tmp/_testin.txt
+ Run what(1) command on test file, assuming correct what(1) command is in path
+$SYSTEM what tmp/_testin.txt >tmp/_testout.txt
+$SYSTEM chmod a=r,u+w tmp/_testout.txt
+$OUTPUT tmp/_expected_test.uu
+begin 644 tmp/_expected_test.txt
+M=&UP+U]T97-T:6XN='AT.@H)($QI;F4@=&5R;6EN871E9`H)(%1A8B!T97)M
+M:6YA=&5D("`@("`@(&%F=&5R('1A8@H)(&1O=6)L92UQ=6]T92!T97)M:6YA
+M=&5D(`H)(&=R96%T97(M=&AA;B!T97)M:6YA=&5D(`H)(&)A8VMS;&%S:"!T
+?97)M:6YA=&5D("`*"2!N=6QL('1E<FUI;F%T960@"@``
+`
+end
+$OUTPUT
+$SYSTEM chmod a+r,u+w tmp/_expected_test.uu; uudecode tmp/_expected_test.uu
+$SYSTEM chmod a=r,u+w tmp/_expected_test.txt tmp/_testin.txt
+$SYSTEM diff -a tmp/_expected_test.txt tmp/_testout.txt && goodbad what good -section 1|| goodbad what bad -section 1
+
+        cleanup
+
+$SYSTEM rm -f tmp/_expected_test.txt tmp/_expected_test.uu tmp/_testin.txt tmp/_testout.txt 
+$ENDIF
+$!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+$IFDEF UFPP_TEST
+
+   Another test suite
+
+   Make a small Fortran program that has an ident string in it as a local
+   unused string, a string in a common, and a string passed as a parameter
+   to see what optimization options may do to these strings, as Fortran 
+   does not actually have a specific way to identify a string as a metadata
+   string (meaning the compiler feels free to remove the string)
+
+$OUTPUT tmp/__wht.f90 
+program testit
+character(len=*),parameter :: ident= '@(#)program.f90:identification info as a parameter' 
+
+character(len=80) :: ident1= '@(#)program.f90:identification info in a common' 
+common /notthere/ ident1
+
+print *,'fortran: Hello World!'
+
+call dum('@(#)program.f90:identification info in a call')
+
+end program testit
+
+subroutine dum(string)
+character(len=*) :: string
+end subroutine dum
+$OUTPUT
+$!----------------------------------------------------------------------------------------------------------------------------------
+
+    Optimized:
+
+$SYSTEM gfortran tmp/__wht.f90 -o tmp/__wht  # compile 
+$SYSTEM tmp/__wht
+
+    Assuming the what(1) command is in your path
+
+$SYSTEM what tmp/__wht
+
+    Optimization off:
+
+$SYSTEM gfortran -O0 -g tmp/__wht.f90 -o tmp/__wht  # compile 
+$SYSTEM tmp/__wht
+$SYSTEM what tmp/__wht
+$!----------------------------------------------------------------------------------------------------------------------------------
+$OUTPUT tmp/__wht.c
+#include <stdlib.h>
+#include <stdio.h>
+char sccsid[] = "@(#)wht.c identification info from global variable"; /* must be global scope or optimization usually removes it */ 
+
+void main(){
+char sccsid_local[] = "@(#)Identification info from local variable"; 
+#ident "@(#)wht.c: identification info from ident"
+#pragma ident "@(#)wht.c: PROGRAM INFORMATION from pragma ident"                       
+   fprintf(stdout,"c: Hello World!\n");
+}
+$OUTPUT
+$!----------------------------------------------------------------------------------------------------------------------------------
+$SYSTEM rm -f tmp/__wht
+$SYSTEM cc tmp/__wht.c -o tmp/__wht
+
+   what strings can be found in the executable
+
+$SYSTEM what tmp/__wht
+$!----------------------------------------------------------------------------------------------------------------------------------
+  cleanup
+
+$SYSTEM rm -f tmp/__wht.c tmp/__wht.f90 tmp/__wht
+exit
+$!----------------------------------------------------------------------------------------------------------------------------------
+$ENDIF
+$!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

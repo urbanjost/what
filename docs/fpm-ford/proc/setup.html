@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="extracts metadata similiarly to SCCS what(1) command">
+    
+    <meta name="author" content="John S. Urban" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>setup &ndash; what</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">what </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../sourcefile/what.f90.html">Source File</a></li>
+        
+        
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+        
+            <li><a href="../program/pedigree.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../sourcefile/what.f90.html">Source File</a></li>
+
+
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/pedigree.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>setup
+      <small>Subroutine</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 3.3% of total for procedures.">5 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/what.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/what.f90.html'>what.f90</a></li>
+    
+     <li><a href='../program/pedigree.html'>pedigree</a></li>
+    
+  
+     <li class="active">setup</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/setup.html#src">setup</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>
+subroutine setup()
+    
+    
+   
+</h2>
+    
+  
+
+
+    
+    <h2 id="name">NAME</h2>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span><span class="n">what</span><span class="p">(</span><span class="mi">1</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="o">[</span><span class="n">DEVELOPER</span><span class="o">]</span><span class="w"> </span><span class="k">extract</span><span class="w"> </span><span class="n">SCCS</span><span class="o">-</span><span class="n">style</span><span class="w"> </span><span class="n">metadata</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">file</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="nl">LICENSE</span><span class="p">:</span><span class="n">PD</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+<h2 id="synopsis">SYNOPSIS</h2>
+<div class="codehilite"><pre><span></span><code>  what [ filename(s) [ -s] [ -q] [ -html|-table] ] | [ [ -help] [ -version] ]
+</code></pre></div>
+
+<h2 id="description">DESCRIPTION</h2>
+<div class="codehilite"><pre><span></span><code>  <span class="nv">The</span> <span class="nv">what</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span> <span class="nv">utility</span> <span class="nv">searches</span> <span class="nv">each</span> <span class="nv">filename</span> <span class="k">for</span> <span class="nv">occurrences</span> <span class="nv">of</span> <span class="nv">the</span>
+  <span class="nv">SCCS</span> <span class="nv">identification</span> <span class="nv">string</span> @### <span class="nv">and</span> <span class="nv">prints</span> <span class="nv">what</span> <span class="nv">follows</span> <span class="nv">up</span> <span class="nv">to</span> <span class="nv">a</span>
+  <span class="s2">&quot;</span><span class="s">,&gt;,\, or any non-printable ASCII character(NULL,NEWLINE,TAB,.....).</span>
+
+  <span class="nv">This</span> <span class="nv">allows</span> <span class="nv">files</span> <span class="nv">to</span> <span class="nv">quickly</span> <span class="nv">be</span> <span class="nv">scanned</span> <span class="k">for</span> <span class="nv">metadata</span> <span class="nv">such</span> <span class="nv">as</span> <span class="nv">simple</span>
+  <span class="nv">descriptions</span>, <span class="nv">versions</span> <span class="nv">and</span> <span class="nv">pedigree</span> <span class="nv">placed</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">files</span>.
+</code></pre></div>
+
+<h2 id="options">OPTIONS</h2>
+<div class="codehilite"><pre><span></span><code>  <span class="nv">The</span> <span class="nv">following</span> <span class="nv">options</span> <span class="nv">are</span> <span class="nv">supported</span>:
+
+  <span class="o">-</span><span class="nv">single</span>, <span class="o">-</span><span class="nv">s</span>    <span class="nv">Stops</span> <span class="nv">after</span> <span class="nv">the</span> <span class="nv">first</span> <span class="nv">occurrence</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">pattern</span> <span class="nv">in</span> <span class="nv">each</span> <span class="nv">file</span>.
+  <span class="o">--</span><span class="nv">html</span>, <span class="o">-</span><span class="nv">H</span>     <span class="nv">Print</span> <span class="nv">output</span> <span class="nv">as</span> <span class="nv">a</span> <span class="nv">table</span> <span class="nv">in</span> <span class="nv">an</span> <span class="nv">HTML</span> <span class="nv">document</span>.
+  <span class="o">--</span><span class="nv">table</span>, <span class="o">-</span><span class="nv">t</span>    <span class="nv">Print</span> <span class="nv">output</span> <span class="nv">as</span> <span class="nv">a</span> <span class="nv">HTML</span> <span class="nv">table</span>.
+  <span class="o">--</span><span class="nv">verbose</span>, <span class="o">-</span><span class="nv">q</span>  <span class="nv">Quiet</span> <span class="nv">mode</span> <span class="ss">(</span><span class="k">do</span> <span class="nv">not</span> <span class="nv">report</span> <span class="nv">errors</span> <span class="nv">when</span> <span class="nv">opening</span> <span class="nv">filenames</span><span class="ss">)</span>
+  <span class="o">--</span><span class="nv">help</span>, <span class="o">-</span><span class="nv">h</span>     <span class="nv">Print</span> <span class="nv">description</span> <span class="nv">of</span> <span class="nv">this</span> <span class="nv">program</span>.
+  <span class="o">--</span><span class="nv">version</span>, <span class="o">-</span><span class="nv">v</span>  <span class="nv">Print</span> <span class="nv">version</span> <span class="nv">information</span> <span class="k">for</span> <span class="nv">this</span> <span class="nv">program</span>
+</code></pre></div>
+
+<h2 id="examples">EXAMPLES</h2>
+<div class="codehilite"><pre><span></span><code>  <span class="n">Example</span> <span class="mi">1</span><span class="p">:</span> <span class="n">Extracting</span> <span class="n">SCCS</span> <span class="n">version</span> <span class="n">information</span>
+
+  <span class="n">Text</span> <span class="n">files</span> <span class="n">are</span> <span class="n">generally</span> <span class="n">easy</span> <span class="n">to</span> <span class="n">place</span> <span class="n">a</span> <span class="err">@</span><span class="c1">### string into by using the</span>
+  <span class="n">appropriate</span> <span class="n">format</span> <span class="k">for</span> <span class="n">a</span> <span class="n">comment</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">language</span> <span class="n">being</span> <span class="n">used</span><span class="o">.</span>
+  <span class="n">Exactly</span> <span class="n">how</span> <span class="n">to</span> <span class="n">place</span> <span class="n">a</span> <span class="n">string</span> <span class="n">into</span> <span class="n">an</span> <span class="n">object</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">executable</span> <span class="n">may</span>
+  <span class="n">vary</span> <span class="n">depending</span> <span class="n">on</span> <span class="n">your</span> <span class="n">compiler</span> <span class="ow">or</span> <span class="n">optimization</span> <span class="n">level</span><span class="o">.</span> <span class="n">Generally</span> <span class="n">the</span>
+  <span class="n">following</span> <span class="n">strings</span> <span class="n">will</span> <span class="n">work</span><span class="p">:</span>
+    <span class="n">o</span> <span class="n">C</span><span class="o">/</span><span class="n">C</span><span class="o">++</span>    <span class="c1">#ident &quot;@###identification info&quot;</span>
+    <span class="n">o</span> <span class="n">C</span><span class="p">:</span>       <span class="nb">char</span> <span class="n">sccsid</span><span class="p">[]</span> <span class="o">=</span> <span class="s2">&quot;@###identification info&quot;</span>
+               <span class="o">/*</span> <span class="n">must</span> <span class="n">be</span> <span class="n">global</span> <span class="n">scope</span> <span class="ow">or</span> <span class="n">optimization</span> <span class="n">usually</span> <span class="n">removes</span> <span class="n">it</span> <span class="o">*/</span>
+    <span class="n">o</span> <span class="n">C</span><span class="o">++</span><span class="p">:</span>     <span class="c1">#pragma ident &quot;@###identification info&quot;</span>
+               <span class="o">/*</span> <span class="n">many</span> <span class="n">references</span> <span class="n">say</span> <span class="n">this</span> <span class="n">should</span> <span class="n">work</span><span class="p">,</span> <span class="n">but</span> <span class="n">unreliable</span> <span class="o">*/</span>
+    <span class="n">o</span> <span class="n">Fortran</span><span class="p">:</span> <span class="n">character</span><span class="p">(</span><span class="n">len</span><span class="o">=*</span><span class="p">),</span><span class="n">parameter</span><span class="p">::</span><span class="n">sccsid</span><span class="o">=</span> <span class="err">@</span><span class="c1">###identification info</span>
+               <span class="n">be</span> <span class="n">careful</span> <span class="n">it</span> <span class="k">is</span> <span class="ow">not</span> <span class="n">removed</span> <span class="n">by</span> <span class="n">high</span> <span class="n">optimization</span> <span class="n">levels</span>
+
+  <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="k">if</span> <span class="n">program</span><span class="o">.</span><span class="n">f90</span> <span class="n">were</span> <span class="n">compiled</span> <span class="n">to</span> <span class="nb">yield</span> <span class="n">program</span><span class="o">.</span><span class="n">o</span> <span class="ow">and</span>
+  <span class="n">executable</span> <span class="n">a</span><span class="o">.</span><span class="n">out</span><span class="p">,</span> <span class="n">the</span> <span class="n">command</span><span class="p">:</span>
+     <span class="n">what</span> <span class="n">program</span><span class="o">.</span><span class="n">f90</span> <span class="n">program</span><span class="o">.</span><span class="n">o</span> <span class="n">a</span><span class="o">.</span><span class="n">out</span>
+  <span class="n">should</span> <span class="n">produce</span><span class="p">:</span>
+
+     <span class="n">program</span><span class="o">.</span><span class="n">f90</span><span class="p">:</span>
+           <span class="n">identification</span> <span class="n">info</span>
+     <span class="n">program</span><span class="o">.</span><span class="n">o</span><span class="p">:</span>
+           <span class="n">identification</span> <span class="n">info</span>
+     <span class="n">a</span><span class="o">.</span><span class="n">out</span><span class="p">:</span>
+           <span class="n">identification</span> <span class="n">info</span>
+
+  <span class="n">A</span> <span class="n">few</span> <span class="n">tips</span> <span class="k">for</span> <span class="n">common</span> <span class="n">interpreted</span> <span class="n">file</span> <span class="n">types</span><span class="p">:</span>
+    <span class="n">o</span> <span class="n">shell</span> <span class="n">script</span><span class="p">:</span>  <span class="c1">#@###identification info</span>
+    <span class="n">o</span> <span class="n">HTML</span><span class="p">:</span>   <span class="o">&lt;!--</span><span class="s2">&quot;@###identification info&quot;</span><span class="o">--&gt;</span>
+</code></pre></div>
+
+<h2 id="exit-status">EXIT STATUS</h2>
+<div class="codehilite"><pre><span></span><code>  <span class="nv">The</span> <span class="nv">following</span> <span class="k">exit</span> <span class="nv">values</span> <span class="nv">are</span> <span class="nv">returned</span>:
+     <span class="mi">0</span>     <span class="nv">Any</span> <span class="nv">matches</span> <span class="nv">were</span> <span class="nv">found</span>.
+     <span class="mi">1</span>     <span class="nv">No</span> <span class="nv">matches</span> <span class="nv">found</span>.
+</code></pre></div>
+
+<h2 id="environment-variables">ENVIRONMENT VARIABLES</h2>
+<h2 id="author">AUTHOR</h2>
+<div class="codehilite"><pre><span></span><code>  John S. Urban
+</code></pre></div>
+
+<h2 id="license">LICENSE</h2>
+<div class="codehilite"><pre><span></span><code>  Public Domain
+</code></pre></div>
+
+<h2 id="see-also">SEE ALSO</h2>
+<div class="codehilite"><pre><span></span><code><span class="nv">The</span> <span class="nv">following</span> <span class="nv">commands</span> <span class="nv">can</span> <span class="nv">help</span> <span class="nv">identify</span> <span class="nv">file</span> <span class="nv">contents</span>
+  <span class="nv">file</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>, <span class="nv">strings</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>, <span class="nv">nm</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>, <span class="nv">ldd</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>, <span class="nv">cpp</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>, <span class="nv">fpp</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>,
+  <span class="nv">ident</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>, <span class="nv">ar</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>, <span class="nv">objdump</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>, <span class="nv">ranlib</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>,
+  [<span class="k">if</span> <span class="nv">SCCS</span> <span class="nv">installed</span> ] <span class="nv">sccs</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>, <span class="nv">sccs</span><span class="o">-</span><span class="nv">admin</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>, <span class="nv">sccs</span><span class="o">-</span><span class="nv">get</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>, ...
+
+<span class="nv">Related</span> <span class="nv">topics</span>: <span class="nv">schema</span>, <span class="nv">IDL</span> <span class="ss">(</span><span class="nv">Information</span> <span class="nv">Description</span> <span class="nv">Language</span><span class="ss">)</span>, ...
+</code></pre></div>
+
+<h2 id="bugs">BUGS</h2>
+<div class="codehilite"><pre><span></span><code>  <span class="nv">There</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">remote</span> <span class="nv">possibility</span> <span class="nv">that</span> <span class="nv">a</span> <span class="nv">spurious</span> <span class="nv">occurrence</span> <span class="nv">of</span> <span class="nv">the</span> <span class="s2">&quot;</span><span class="s">@###</span><span class="s2">&quot;</span>
+  <span class="nv">pattern</span> <span class="nv">could</span> <span class="nv">be</span> <span class="nv">found</span> <span class="nv">by</span> <span class="nv">what</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>.
+
+  <span class="k">If</span> <span class="nv">standard</span> <span class="nv">input</span> <span class="nv">is</span> <span class="nv">processed</span> <span class="nv">it</span> <span class="nv">must</span> <span class="nv">be</span> <span class="nv">a</span> <span class="nv">text</span> <span class="nv">file</span> <span class="nv">with</span> <span class="nv">line</span> <span class="nv">width</span> <span class="nv">less</span>
+  <span class="nv">than</span> <span class="mi">4</span>,<span class="mi">096</span> <span class="nv">characters</span> <span class="nv">or</span> <span class="nv">errors</span> <span class="nv">may</span> <span class="nv">occur</span>.
+
+  <span class="nv">The</span> <span class="nv">length</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">file</span> <span class="nv">arguments</span> <span class="nv">may</span> <span class="nv">be</span> <span class="nv">limited</span> <span class="nv">depending</span> <span class="nv">on</span> <span class="nv">what</span>
+  <span class="nv">command</span><span class="o">-</span><span class="nv">line</span> <span class="nv">argument</span> <span class="nv">parser</span> <span class="nv">is</span> <span class="nv">used</span>.
+</code></pre></div>
+    
+
+    <h3>Arguments</h3>
+    
+    <em>None</em>
+    <br>
+    
+    
+    
+    
+     
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/setup.html#src">setup</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">setup</span><span class="p">()</span>
+<span class="k">implicit none</span>
+
+
+<span class="n">help_text</span><span class="o">=</span><span class="p">[</span> <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">LEN</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span> <span class="kd">::</span> <span class="p">&amp;</span>
+<span class="s1">&#39;NAME&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     what(1f) - [DEVELOPER] extract SCCS-style metadata from a file&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     (LICENSE:PD)&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;SYNOPSIS&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     what [ filename(s) [ -s] [ -q] [ -html|-table] ] | [ [ -help] [ -version] ]&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;DESCRIPTION&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     The what(1) utility searches each filename for occurrences of the&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     SCCS identification string @### and prints what follows up to a&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     &quot;,&gt;,\, or any non-printable ASCII character(NULL,NEWLINE,TAB,.....).&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     This allows files to quickly be scanned for metadata such as simple&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     descriptions, versions and pedigree placed in the files.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;OPTIONS&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     The following options are supported:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     -single, -s    Stops after the first occurrence of the pattern in each file.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     --html, -H     Print output as a table in an HTML document.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     --table, -t    Print output as a HTML table.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     --verbose, -q  Quiet mode (do not report errors when opening filenames)&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     --help, -h     Print description of this program.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     --version, -v  Print version information for this program&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;EXAMPLES&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     Example 1: Extracting SCCS version information&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     Text files are generally easy to place a @### string into by using the&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     appropriate format for a comment in the language being used.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     Exactly how to place a string into an object file or executable may&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     vary depending on your compiler or optimization level. Generally the&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     following strings will work:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;       o C/C++    #ident &quot;@###identification info&quot;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;       o C:       char sccsid[] = &quot;@###identification info&quot;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;                  /* must be global scope or optimization usually removes it */&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;       o C++:     #pragma ident &quot;@###identification info&quot;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;                  /* many references say this should work, but unreliable */&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;       o Fortran: character(len=*),parameter::sccsid= @###identification info&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;                  be careful it is not removed by high optimization levels&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     For example, if program.f90 were compiled to yield program.o and&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     executable a.out, the command:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;        what program.f90 program.o a.out&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     should produce:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;        program.f90:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;              identification info&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;        program.o:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;              identification info&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;        a.out:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;              identification info&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     A few tips for common interpreted file types:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;       o shell script:  #@###identification info&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;       o HTML:   &lt;!--&quot;@###identification info&quot;--&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;EXIT STATUS&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     The following exit values are returned:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;        0     Any matches were found.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;        1     No matches found.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;ENVIRONMENT VARIABLES&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;AUTHOR&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     John S. Urban&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;LICENSE&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     Public Domain&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;SEE ALSO&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;   The following commands can help identify file contents&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     file(1), strings(1), nm(1), ldd(1), cpp(1), fpp(1),&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     ident(1), ar(1), objdump(1), ranlib(1),&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     [if SCCS installed ] sccs(1), sccs-admin(1), sccs-get(1), ...&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;   Related topics: schema, IDL (Information Description Language), ...&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;BUGS&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     There is a remote possibility that a spurious occurrence of the &quot;@###&quot;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     pattern could be found by what(1).&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     If standard input is processed it must be a text file with line width less&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     than 4,096 characters or errors may occur.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     The length of the file arguments may be limited depending on what&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     command-line argument parser is used.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">]</span>
+<span class="c">!&gt;</span>
+<span class="c">!!##NAME</span>
+<span class="c">!!      what(1f) - [DEVELOPER] extract SCCS-style metadata from a file</span>
+<span class="c">!!      (LICENSE:PD)</span>
+<span class="c">!!</span>
+<span class="c">!!##SYNOPSIS</span>
+<span class="c">!!</span>
+<span class="c">!!      what [ filename(s) [ -s] [ -q] [ -html|-table] ] | [ [ -help] [ -version] ]</span>
+<span class="c">!!</span>
+<span class="c">!!##DESCRIPTION</span>
+<span class="c">!!      The what(1) utility searches each filename for occurrences of the</span>
+<span class="c">!!      SCCS identification string @### and prints what follows up to a</span>
+<span class="c">!!      &quot;,&gt;,\, or any non-printable ASCII character(NULL,NEWLINE,TAB,.....).</span>
+<span class="c">!!</span>
+<span class="c">!!      This allows files to quickly be scanned for metadata such as simple</span>
+<span class="c">!!      descriptions, versions and pedigree placed in the files.</span>
+<span class="c">!!</span>
+<span class="c">!!##OPTIONS</span>
+<span class="c">!!      The following options are supported:</span>
+<span class="c">!!</span>
+<span class="c">!!      -single, -s    Stops after the first occurrence of the pattern in each file.</span>
+<span class="c">!!      --html, -H     Print output as a table in an HTML document.</span>
+<span class="c">!!      --table, -t    Print output as a HTML table.</span>
+<span class="c">!!      --verbose, -q  Quiet mode (do not report errors when opening filenames)</span>
+<span class="c">!!      --help, -h     Print description of this program.</span>
+<span class="c">!!      --version, -v  Print version information for this program</span>
+<span class="c">!!</span>
+<span class="c">!!##EXAMPLES</span>
+<span class="c">!!</span>
+<span class="c">!!      Example 1: Extracting SCCS version information</span>
+<span class="c">!!</span>
+<span class="c">!!      Text files are generally easy to place a @### string into by using the</span>
+<span class="c">!!      appropriate format for a comment in the language being used.</span>
+<span class="c">!!      Exactly how to place a string into an object file or executable may</span>
+<span class="c">!!      vary depending on your compiler or optimization level. Generally the</span>
+<span class="c">!!      following strings will work:</span>
+<span class="c">!!        o C/C++    #ident &quot;@###identification info&quot;</span>
+<span class="c">!!        o C:       char sccsid[] = &quot;@###identification info&quot;</span>
+<span class="c">!!                   /* must be global scope or optimization usually removes it */</span>
+<span class="c">!!        o C++:     #pragma ident &quot;@###identification info&quot;</span>
+<span class="c">!!                   /* many references say this should work, but unreliable */</span>
+<span class="c">!!        o Fortran: character(len=*),parameter::sccsid= @###identification info</span>
+<span class="c">!!                   be careful it is not removed by high optimization levels</span>
+<span class="c">!!</span>
+<span class="c">!!      For example, if program.f90 were compiled to yield program.o and</span>
+<span class="c">!!      executable a.out, the command:</span>
+<span class="c">!!         what program.f90 program.o a.out</span>
+<span class="c">!!      should produce:</span>
+<span class="c">!!</span>
+<span class="c">!!         program.f90:</span>
+<span class="c">!!               identification info</span>
+<span class="c">!!         program.o:</span>
+<span class="c">!!               identification info</span>
+<span class="c">!!         a.out:</span>
+<span class="c">!!               identification info</span>
+<span class="c">!!</span>
+<span class="c">!!      A few tips for common interpreted file types:</span>
+<span class="c">!!        o shell script:  #@###identification info</span>
+<span class="c">!!        o HTML:   &lt;!--&quot;@###identification info&quot;--&gt;</span>
+<span class="c">!!</span>
+<span class="c">!!##EXIT STATUS</span>
+<span class="c">!!      The following exit values are returned:</span>
+<span class="c">!!         0     Any matches were found.</span>
+<span class="c">!!         1     No matches found.</span>
+<span class="c">!!</span>
+<span class="c">!!##ENVIRONMENT VARIABLES</span>
+<span class="c">!!</span>
+<span class="c">!!##AUTHOR</span>
+<span class="c">!!      John S. Urban</span>
+<span class="c">!!##LICENSE</span>
+<span class="c">!!      Public Domain</span>
+<span class="c">!!</span>
+<span class="c">!!##SEE ALSO</span>
+<span class="c">!!    The following commands can help identify file contents</span>
+<span class="c">!!      file(1), strings(1), nm(1), ldd(1), cpp(1), fpp(1),</span>
+<span class="c">!!      ident(1), ar(1), objdump(1), ranlib(1),</span>
+<span class="c">!!      [if SCCS installed ] sccs(1), sccs-admin(1), sccs-get(1), ...</span>
+<span class="c">!!</span>
+<span class="c">!!    Related topics: schema, IDL (Information Description Language), ...</span>
+<span class="c">!!</span>
+<span class="c">!!##BUGS</span>
+<span class="c">!!      There is a remote possibility that a spurious occurrence of the &quot;@###&quot;</span>
+<span class="c">!!      pattern could be found by what(1).</span>
+<span class="c">!!</span>
+<span class="c">!!      If standard input is processed it must be a text file with line width less</span>
+<span class="c">!!      than 4,096 characters or errors may occur.</span>
+<span class="c">!!</span>
+<span class="c">!!      The length of the file arguments may be limited depending on what</span>
+<span class="c">!!      command-line argument parser is used.</span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="c">!  strings contain prefix @(#) and suffix &quot; so strings should show up via what(1) command; trimmed when printed by this procedure</span>
+<span class="c">!  NOTES:</span>
+<span class="c">!  developer-supplied information (usually)</span>
+<span class="c">!  Reference: Dublin Core Metadata Element Set (supplemented)</span>
+
+<span class="c">!  used to tie this code (and compilation) to a unique key that can be used in QA records, as a database key, ...</span>
+<span class="c">!  for IDENTIFIER depending on what key type you use, it may be able to extract the time the key was generated from the key value</span>
+
+<span class="c">!  typical STATUS valus ar development, test, production</span>
+<span class="c">!  DATE    can be of various types, such as creation, modification, registration</span>
+
+<span class="c">!  OTHERS:</span>
+<span class="c">!  Birth        : 2015-07-12 12:24:04 Change: 2015-07-19 23:33:46</span>
+
+<span class="c">!  compilation host:</span>
+<span class="c">!  ORIGIN is typically stat(3c)/stat(1),file(1),ls(1) info. at time of compilation, might need INCLUDE/MODULE/PREPROCESSOR use</span>
+
+<span class="c">!  SOURCE IS typically cpp(1) macro __FILE__</span>
+
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="n">version_text</span><span class="o">=</span><span class="p">[</span> <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">LEN</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span> <span class="kd">::</span> <span class="p">&amp;</span>
+<span class="s1">&#39;@(#)TITLE            :: what(1f)&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)DATE             :: 2015/07/17  1:23:28 PM&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)DESCRIPTION      :: extract SCCS-style metadata from files&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)SUBJECT          :: metadata,SCCS identification string&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)TYPE             :: executable command&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)IDENTIFIER       :: VERSION=2.0.0 UUID=cc787735-fed2-42d3-8cb2-515ea7599873&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)STATUS           :: PRODUCTION 20160202&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)CREATOR          :: John S. Urban&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)PUBLISHER        :: CONTACT=urbanjost@comcast.net&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)CONTRIBUTOR      :: &gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)RIGHTS           :: Public Domain&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)FORMAT           :: Fortran program&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)SOURCE           :: LIBRARY/libGPF/EXE/WHAT/what.FF&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)LANGUAGE         :: english&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)RELATION         :: ISO/IEC DIS 9945-2:1992, Information technology - POSIX-Part 2: Shell and Utilities&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)COVERAGE         :: ORIGIN=Pennsylvania,USA ORIGIN_TGN=7007710&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)ORIGIN           :: CYGWIN_NT-6.3 buzz 2.0.3(0.287/5/3) 2015-06-03 13:57 x86_64 Cygwin&gt; !uname(3c)&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">]</span>
+<span class="k">end subroutine </span><span class="n">setup</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    
+    </div>
+  </div>
+
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2022 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2022-06-26 22:53  
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> what was developed by John S. Urban</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

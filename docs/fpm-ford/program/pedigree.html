@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="extracts metadata similiarly to SCCS what(1) command">
+    
+    <meta name="author" content="John S. Urban" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>pedigree &ndash; what</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">what </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../sourcefile/what.f90.html">Source File</a></li>
+        
+        
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+        
+            <li><a href="../program/pedigree.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../sourcefile/what.f90.html">Source File</a></li>
+
+
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/pedigree.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>pedigree
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title="100.0% of total for programs.">247 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/what.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/what.f90.html'>what.f90</a></li>
+    
+  
+     <li class="active">pedigree</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-fd~2">fd</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-found">found</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-help_text">help_text</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-html">html</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-i">i</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-ident">ident</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-ios~3">ios</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-message">message</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-quiet">quiet</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-stop_on_first">stop_on_first</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-table">table</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-version_text">version_text</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-0">Functions</a></h3></div>
+  <div id="funcs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/pedigree.html#proc-process_file">process_file</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/pedigree.html#proc-getnextchar">getnextchar</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#proc-setup">setup</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../program/pedigree.html#src">pedigree</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li>M_CLI2</li>
+    
+    <li>M_strings</li>
+    
+    <li>M_verify</li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-fd~2">fd</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-found">found</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-help_text">help_text</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-html">html</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-i">i</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-ident">ident</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-ios~3">ios</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-message">message</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-quiet">quiet</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-stop_on_first">stop_on_first</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-table">table</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#variable-version_text">version_text</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-1">Functions</a></h3></div>
+  <div id="funcs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/pedigree.html#proc-process_file">process_file</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/pedigree.html#proc-getnextchar">getnextchar</a>
+      
+      <a class="list-group-item" href="../program/pedigree.html#proc-setup">setup</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../program/pedigree.html#src">pedigree</a>
+  </div>
+</div>
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-fd~2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>fd</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-found"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>found</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-help_text"></span>character(len=:),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>help_text</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-html"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>html</strong></td><td> =</td><td>.FALSE.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>i</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ident"></span>character(len=*),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>ident</strong></td><td> =</td><td>"@(#) what(1f): extract SCCS-style identification strings from a file"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ios~3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ios</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-message"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>message</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-quiet"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>quiet</strong></td><td> =</td><td>.FALSE.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-stop_on_first"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>stop_on_first</strong></td><td> =</td><td>.FALSE.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-table"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>table</strong></td><td> =</td><td>.FALSE.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-version_text"></span>character(len=:),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>version_text</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+     
+    <section>
+    <h2>Functions</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-process_file"></span><h3>
+function <a href='../proc/process_file.html'>process_file</a>() result(ifound_total_back)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    </section>
+    <br>
+    
+
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getnextchar"></span><h3>
+subroutine <a href='../proc/getnextchar.html'>getnextchar</a>(fd, c, ios, reset)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fd</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>c</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ios</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>reset</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-setup"></span><h3>
+subroutine <a href='../proc/setup.html'>setup</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<a href="../proc/setup.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    
+    
+    
+    <section>
+    <h2 id="src">Source Code</h2>
+    <div class="highlight"><pre><span></span><span class="k">program </span><span class="n">pedigree</span>                               <span class="c">! display file metadata embedded using SCCS identification strings</span>
+<span class="k">use </span><span class="n">M_CLI2</span><span class="p">,</span> <span class="k">only</span><span class="p">:</span> <span class="n">set_args</span><span class="p">,</span> <span class="n">lget</span><span class="p">,</span> <span class="n">filename</span><span class="o">=&gt;</span><span class="n">unnamed</span>           <span class="c">! command argument parser</span>
+<span class="k">use </span><span class="n">M_strings</span><span class="p">,</span> <span class="k">only</span><span class="p">:</span> <span class="n">split</span><span class="p">,</span> <span class="n">substitute</span>
+<span class="k">use </span><span class="n">M_verify</span><span class="p">,</span>   <span class="k">only</span><span class="p">:</span> <span class="n">stderr</span><span class="p">,</span> <span class="n">debug</span>
+<span class="k">implicit none</span>
+<span class="c">! could add search for &#39;$keyword: description$&#39; as used by RCS too. See ident(command)</span>
+<span class="c">! the sequence @(#) originated with SCCS (probably). See SCCS what(1) command</span>
+
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">ident</span><span class="o">=</span><span class="s2">&quot;@(#) what(1f): extract SCCS-style identification strings from a file&quot;</span>
+
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">message</span>     <span class="c">! message field for returned messages</span>
+<span class="kt">logical</span>             <span class="kd">::</span> <span class="n">stop_on_first</span> <span class="o">=</span> <span class="p">.</span><span class="n">FALSE</span><span class="p">.</span> <span class="c">! switch to show only first string found or all</span>
+<span class="kt">logical</span>             <span class="kd">::</span> <span class="n">html</span>          <span class="o">=</span> <span class="p">.</span><span class="n">FALSE</span><span class="p">.</span> <span class="c">! switch to output as an HTML document with a table</span>
+<span class="kt">logical</span>             <span class="kd">::</span> <span class="n">table</span>         <span class="o">=</span> <span class="p">.</span><span class="n">FALSE</span><span class="p">.</span> <span class="c">! switch to output as an HTML table</span>
+<span class="kt">logical</span>             <span class="kd">::</span> <span class="n">quiet</span>         <span class="o">=</span> <span class="p">.</span><span class="n">FALSE</span><span class="p">.</span> <span class="c">! switch to suppress error messages</span>
+<span class="kt">integer</span>             <span class="kd">::</span> <span class="n">fd</span>                      <span class="c">! file descriptor for file currently being read</span>
+<span class="kt">integer</span>             <span class="kd">::</span> <span class="n">found</span> <span class="o">=</span> <span class="mi">0</span>               <span class="c">! command return status</span>
+<span class="kt">integer</span>             <span class="kd">::</span> <span class="n">ios</span>                     <span class="c">! hold I/O error flag</span>
+<span class="kt">integer</span>             <span class="kd">::</span> <span class="n">i</span>                       <span class="c">! loop counter</span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span> <span class="kd">::</span> <span class="n">help_text</span><span class="p">(:)</span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span> <span class="kd">::</span> <span class="n">version_text</span><span class="p">(:)</span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="c">! define command arguments and parse command line</span>
+<span class="k">call </span><span class="n">setup</span><span class="p">()</span>
+<span class="k">call </span><span class="n">set_args</span><span class="p">(</span><span class="s1">&#39;-single:s F --html:H F --table:t F --debug F&#39;</span><span class="p">,</span><span class="n">help_text</span><span class="p">,</span><span class="n">version_text</span><span class="p">)</span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="n">debug</span><span class="o">=</span><span class="n">lget</span><span class="p">(</span><span class="s1">&#39;debug&#39;</span><span class="p">)</span>                       <span class="c">! get value of command line switch -debug</span>
+<span class="n">html</span><span class="o">=</span><span class="n">lget</span><span class="p">(</span><span class="s1">&#39;html&#39;</span><span class="p">)</span>                         <span class="c">! get value of command line switch -html</span>
+<span class="n">table</span><span class="o">=</span><span class="n">lget</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">)</span>                       <span class="c">! get value of command line switch -table</span>
+<span class="n">quiet</span><span class="o">=</span><span class="n">lget</span><span class="p">(</span><span class="s1">&#39;verbose&#39;</span><span class="p">)</span>                     <span class="c">! get value of command line switch -q to switch whether to report error messages</span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="n">stop_on_first</span><span class="o">=</span><span class="n">lget</span><span class="p">(</span><span class="s1">&#39;single&#39;</span><span class="p">)</span>              <span class="c">! if selected on command line, only display one string per file</span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="k">if</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">filename</span><span class="p">).</span><span class="n">eq</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span><span class="k">then</span>
+<span class="k">   </span><span class="n">filename</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="p">]</span>
+<span class="k">endif</span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">html</span><span class="p">)</span><span class="k">then</span>                                       <span class="c">! if html output is selected print beginning of a simple HTML document</span>
+   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a)&#39;</span><span class="p">)</span><span class="s1">&#39;&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;table border=&quot;1&quot;&gt;&#39;</span>
+<span class="n">elseif</span><span class="p">(</span><span class="n">table</span><span class="p">)</span><span class="k">then</span>
+<span class="k">   write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a)&#39;</span><span class="p">)</span><span class="s1">&#39;&lt;table border=&quot;1&quot;&gt;&#39;</span>
+<span class="k">endif</span>
+
+<span class="n">FILES</span><span class="p">:</span> <span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">size</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>                       <span class="c">! step thru filenames to scan</span>
+   <span class="k">if</span><span class="p">(</span><span class="n">filename</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="n">eq</span><span class="p">.</span><span class="s1">&#39;-&#39;</span><span class="p">.</span><span class="nb">or</span><span class="p">.</span><span class="n">filename</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="n">eq</span><span class="p">.</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="k">then</span> <span class="c">! input file is standard input, but currently cannot be opened as a stream</span>
+      <span class="n">fd</span><span class="o">=</span><span class="mi">5</span>
+   <span class="k">else</span>                                            <span class="c">! open stream file</span>
+      <span class="n">fd</span><span class="o">=</span><span class="mi">10</span>
+      <span class="c">!-------- KLUDGE TO GET AROUND ERROR IN gfortran GNU Fortran (GCC) 4.9.3 20150826</span>
+      <span class="c">!-------- Get no error on opening files like directories, but then a READ crashes</span>
+      <span class="c">!-------- Open as regular file</span>
+      <span class="k">open</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">fd</span><span class="p">,</span><span class="k">file</span><span class="o">=</span><span class="nb">trim</span><span class="p">(</span><span class="n">filename</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="n">status</span><span class="o">=</span><span class="s1">&#39;old&#39;</span><span class="p">,</span><span class="n">iostat</span><span class="o">=</span><span class="n">ios</span><span class="p">,</span><span class="n">iomsg</span><span class="o">=</span><span class="n">message</span><span class="p">)</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">ios</span><span class="p">.</span><span class="n">ne</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span><span class="k">then</span>
+<span class="k">         if</span><span class="p">(.</span><span class="nb">not</span><span class="p">.</span><span class="n">quiet</span><span class="p">)</span><span class="k">then</span>
+<span class="k">            call </span><span class="n">stderr</span><span class="p">(</span><span class="s1">&#39;error: could not open &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">filename</span><span class="p">(</span><span class="n">i</span><span class="p">)))</span>
+            <span class="k">call </span><span class="n">stderr</span><span class="p">(</span><span class="s1">&#39;error: &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
+         <span class="k">endif</span>
+<span class="k">         close</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">fd</span><span class="p">,</span><span class="n">iostat</span><span class="o">=</span><span class="n">ios</span><span class="p">)</span>
+         <span class="k">cycle </span><span class="n">FILES</span>
+      <span class="k">else</span>
+<span class="k">         close</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">fd</span><span class="p">,</span><span class="n">iostat</span><span class="o">=</span><span class="n">ios</span><span class="p">)</span>
+      <span class="k">endif</span>
+      <span class="c">!--------</span>
+      <span class="k">open</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">fd</span><span class="p">,</span><span class="k">file</span><span class="o">=</span><span class="nb">trim</span><span class="p">(</span><span class="n">filename</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="nb">access</span><span class="o">=</span><span class="s1">&#39;stream&#39;</span><span class="p">,</span><span class="n">status</span><span class="o">=</span><span class="s1">&#39;old&#39;</span><span class="p">,</span><span class="n">iostat</span><span class="o">=</span><span class="n">ios</span><span class="p">,</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;read&#39;</span><span class="p">,</span><span class="n">form</span><span class="o">=</span><span class="s1">&#39;unformatted&#39;</span><span class="p">,</span><span class="n">iomsg</span><span class="o">=</span><span class="n">message</span><span class="p">)</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">debug</span><span class="p">)</span><span class="k">then</span>
+<span class="k">         write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;*what* open unit=&#39;</span><span class="p">,</span><span class="n">fd</span><span class="p">,</span><span class="s1">&#39;i= &#39;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="s1">&#39; file=&#39;</span><span class="p">,</span><span class="nb">trim</span><span class="p">(</span><span class="n">filename</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="s1">&#39;iostat=&#39;</span><span class="p">,</span><span class="n">ios</span>
+      <span class="k">endif</span>
+<span class="k">      if</span><span class="p">(</span><span class="n">ios</span><span class="p">.</span><span class="n">ne</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span><span class="k">then</span>
+<span class="k">         if</span><span class="p">(.</span><span class="nb">not</span><span class="p">.</span><span class="n">quiet</span><span class="p">)</span><span class="k">then</span>
+<span class="k">            call </span><span class="n">stderr</span><span class="p">(</span><span class="s1">&#39;error: could not open &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">filename</span><span class="p">(</span><span class="n">i</span><span class="p">)))</span>
+            <span class="k">call </span><span class="n">stderr</span><span class="p">(</span><span class="s1">&#39;error: &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
+         <span class="k">endif</span>
+<span class="k">         if</span><span class="p">(</span><span class="n">debug</span><span class="p">)</span><span class="k">then</span>
+<span class="k">            write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;*what* close on bad open unit=&#39;</span><span class="p">,</span><span class="n">fd</span><span class="p">,</span><span class="s1">&#39;iostat=&#39;</span><span class="p">,</span><span class="n">ios</span>
+         <span class="k">endif</span>
+<span class="k">         </span><span class="nb">flush</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">fd</span><span class="p">,</span><span class="n">iostat</span><span class="o">=</span><span class="n">ios</span><span class="p">)</span>
+         <span class="k">close</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">fd</span><span class="p">,</span><span class="n">iostat</span><span class="o">=</span><span class="n">ios</span><span class="p">)</span>
+         <span class="k">cycle </span><span class="n">FILES</span>
+      <span class="k">endif</span>
+<span class="k">   endif</span>
+<span class="k">   if</span><span class="p">(</span><span class="n">html</span><span class="p">.</span><span class="nb">or</span><span class="p">.</span><span class="n">table</span><span class="p">)</span><span class="k">then</span>
+<span class="k">      write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(3a)&#39;</span><span class="p">,</span><span class="n">advance</span><span class="o">=</span><span class="s1">&#39;no&#39;</span><span class="p">)</span> <span class="s1">&#39;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;&#39;</span><span class="p">,</span><span class="nb">trim</span><span class="p">(</span><span class="n">filename</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="s1">&#39;&quot;&gt;&#39;</span>
+      <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a,&quot;&lt;/a&gt;&lt;/td&gt;&quot;)&#39;</span><span class="p">)</span> <span class="nb">trim</span><span class="p">(</span><span class="n">filename</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+   <span class="k">else</span>
+<span class="k">      if</span><span class="p">(</span><span class="n">stop_on_first</span><span class="p">)</span><span class="k">then</span>
+<span class="k">         write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a,&quot;:&quot;)&#39;</span><span class="p">,</span><span class="n">advance</span><span class="o">=</span><span class="s1">&#39;no&#39;</span><span class="p">)</span><span class="nb">trim</span><span class="p">(</span><span class="n">filename</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+      <span class="k">else</span>
+<span class="k">         write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a,&quot;:&quot;)&#39;</span><span class="p">,</span><span class="n">advance</span><span class="o">=</span><span class="s1">&#39;yes&#39;</span><span class="p">)</span><span class="nb">trim</span><span class="p">(</span><span class="n">filename</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+      <span class="k">endif</span>
+<span class="k">   endif</span>
+<span class="k">   </span><span class="n">found</span> <span class="o">=</span> <span class="n">found</span> <span class="o">+</span> <span class="n">process_file</span><span class="p">()</span>
+   <span class="k">if</span><span class="p">(</span><span class="n">debug</span><span class="p">)</span><span class="k">then</span>
+<span class="k">      write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;*what* close unit=&#39;</span><span class="p">,</span><span class="n">fd</span><span class="p">,</span><span class="s1">&#39;iostat=&#39;</span><span class="p">,</span><span class="n">ios</span>
+   <span class="k">endif</span>
+<span class="k">   </span><span class="nb">flush</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">fd</span><span class="p">,</span><span class="n">iostat</span><span class="o">=</span><span class="n">ios</span><span class="p">)</span>
+   <span class="k">close</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">fd</span><span class="p">,</span><span class="n">iostat</span><span class="o">=</span><span class="n">ios</span><span class="p">)</span>
+<span class="k">enddo </span><span class="n">FILES</span>
+<span class="k">if</span><span class="p">(</span><span class="n">html</span><span class="p">)</span><span class="k">then</span>
+<span class="k">   write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a)&#39;</span><span class="p">)</span><span class="s1">&#39;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;&#39;</span>
+<span class="n">elseif</span><span class="p">(</span><span class="n">table</span><span class="p">)</span><span class="k">then</span>
+<span class="k">   write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a)&#39;</span><span class="p">)</span><span class="s1">&#39;&lt;/table&gt;&#39;</span>
+<span class="k">endif</span>
+<span class="k">select case</span> <span class="p">(</span><span class="n">found</span><span class="p">)</span>
+<span class="k">case</span><span class="p">(:</span><span class="mi">0</span><span class="p">)</span> <span class="p">;</span> <span class="k">stop</span> <span class="c">! 1</span>
+<span class="k">case</span><span class="p">(</span><span class="mi">1</span><span class="p">:)</span> <span class="p">;</span> <span class="k">stop</span>
+<span class="k">end select</span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="k">contains</span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="k">subroutine </span><span class="n">setup</span><span class="p">()</span>
+<span class="k">implicit none</span>
+
+
+<span class="n">help_text</span><span class="o">=</span><span class="p">[</span> <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">LEN</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span> <span class="kd">::</span> <span class="p">&amp;</span>
+<span class="s1">&#39;NAME&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     what(1f) - [DEVELOPER] extract SCCS-style metadata from a file&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     (LICENSE:PD)&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;SYNOPSIS&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     what [ filename(s) [ -s] [ -q] [ -html|-table] ] | [ [ -help] [ -version] ]&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;DESCRIPTION&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     The what(1) utility searches each filename for occurrences of the&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     SCCS identification string @### and prints what follows up to a&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     &quot;,&gt;,\, or any non-printable ASCII character(NULL,NEWLINE,TAB,.....).&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     This allows files to quickly be scanned for metadata such as simple&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     descriptions, versions and pedigree placed in the files.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;OPTIONS&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     The following options are supported:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     -single, -s    Stops after the first occurrence of the pattern in each file.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     --html, -H     Print output as a table in an HTML document.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     --table, -t    Print output as a HTML table.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     --verbose, -q  Quiet mode (do not report errors when opening filenames)&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     --help, -h     Print description of this program.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     --version, -v  Print version information for this program&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;EXAMPLES&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     Example 1: Extracting SCCS version information&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     Text files are generally easy to place a @### string into by using the&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     appropriate format for a comment in the language being used.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     Exactly how to place a string into an object file or executable may&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     vary depending on your compiler or optimization level. Generally the&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     following strings will work:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;       o C/C++    #ident &quot;@###identification info&quot;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;       o C:       char sccsid[] = &quot;@###identification info&quot;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;                  /* must be global scope or optimization usually removes it */&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;       o C++:     #pragma ident &quot;@###identification info&quot;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;                  /* many references say this should work, but unreliable */&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;       o Fortran: character(len=*),parameter::sccsid= @###identification info&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;                  be careful it is not removed by high optimization levels&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     For example, if program.f90 were compiled to yield program.o and&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     executable a.out, the command:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;        what program.f90 program.o a.out&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     should produce:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;        program.f90:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;              identification info&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;        program.o:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;              identification info&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;        a.out:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;              identification info&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     A few tips for common interpreted file types:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;       o shell script:  #@###identification info&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;       o HTML:   &lt;!--&quot;@###identification info&quot;--&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;EXIT STATUS&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     The following exit values are returned:&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;        0     Any matches were found.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;        1     No matches found.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;ENVIRONMENT VARIABLES&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;AUTHOR&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     John S. Urban&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;LICENSE&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     Public Domain&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;SEE ALSO&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;   The following commands can help identify file contents&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     file(1), strings(1), nm(1), ldd(1), cpp(1), fpp(1),&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     ident(1), ar(1), objdump(1), ranlib(1),&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     [if SCCS installed ] sccs(1), sccs-admin(1), sccs-get(1), ...&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;   Related topics: schema, IDL (Information Description Language), ...&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;BUGS&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     There is a remote possibility that a spurious occurrence of the &quot;@###&quot;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     pattern could be found by what(1).&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     If standard input is processed it must be a text file with line width less&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     than 4,096 characters or errors may occur.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     The length of the file arguments may be limited depending on what&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;     command-line argument parser is used.&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">]</span>
+<span class="c">!&gt;</span>
+<span class="c">!!##NAME</span>
+<span class="c">!!      what(1f) - [DEVELOPER] extract SCCS-style metadata from a file</span>
+<span class="c">!!      (LICENSE:PD)</span>
+<span class="c">!!</span>
+<span class="c">!!##SYNOPSIS</span>
+<span class="c">!!</span>
+<span class="c">!!      what [ filename(s) [ -s] [ -q] [ -html|-table] ] | [ [ -help] [ -version] ]</span>
+<span class="c">!!</span>
+<span class="c">!!##DESCRIPTION</span>
+<span class="c">!!      The what(1) utility searches each filename for occurrences of the</span>
+<span class="c">!!      SCCS identification string @### and prints what follows up to a</span>
+<span class="c">!!      &quot;,&gt;,\, or any non-printable ASCII character(NULL,NEWLINE,TAB,.....).</span>
+<span class="c">!!</span>
+<span class="c">!!      This allows files to quickly be scanned for metadata such as simple</span>
+<span class="c">!!      descriptions, versions and pedigree placed in the files.</span>
+<span class="c">!!</span>
+<span class="c">!!##OPTIONS</span>
+<span class="c">!!      The following options are supported:</span>
+<span class="c">!!</span>
+<span class="c">!!      -single, -s    Stops after the first occurrence of the pattern in each file.</span>
+<span class="c">!!      --html, -H     Print output as a table in an HTML document.</span>
+<span class="c">!!      --table, -t    Print output as a HTML table.</span>
+<span class="c">!!      --verbose, -q  Quiet mode (do not report errors when opening filenames)</span>
+<span class="c">!!      --help, -h     Print description of this program.</span>
+<span class="c">!!      --version, -v  Print version information for this program</span>
+<span class="c">!!</span>
+<span class="c">!!##EXAMPLES</span>
+<span class="c">!!</span>
+<span class="c">!!      Example 1: Extracting SCCS version information</span>
+<span class="c">!!</span>
+<span class="c">!!      Text files are generally easy to place a @### string into by using the</span>
+<span class="c">!!      appropriate format for a comment in the language being used.</span>
+<span class="c">!!      Exactly how to place a string into an object file or executable may</span>
+<span class="c">!!      vary depending on your compiler or optimization level. Generally the</span>
+<span class="c">!!      following strings will work:</span>
+<span class="c">!!        o C/C++    #ident &quot;@###identification info&quot;</span>
+<span class="c">!!        o C:       char sccsid[] = &quot;@###identification info&quot;</span>
+<span class="c">!!                   /* must be global scope or optimization usually removes it */</span>
+<span class="c">!!        o C++:     #pragma ident &quot;@###identification info&quot;</span>
+<span class="c">!!                   /* many references say this should work, but unreliable */</span>
+<span class="c">!!        o Fortran: character(len=*),parameter::sccsid= @###identification info</span>
+<span class="c">!!                   be careful it is not removed by high optimization levels</span>
+<span class="c">!!</span>
+<span class="c">!!      For example, if program.f90 were compiled to yield program.o and</span>
+<span class="c">!!      executable a.out, the command:</span>
+<span class="c">!!         what program.f90 program.o a.out</span>
+<span class="c">!!      should produce:</span>
+<span class="c">!!</span>
+<span class="c">!!         program.f90:</span>
+<span class="c">!!               identification info</span>
+<span class="c">!!         program.o:</span>
+<span class="c">!!               identification info</span>
+<span class="c">!!         a.out:</span>
+<span class="c">!!               identification info</span>
+<span class="c">!!</span>
+<span class="c">!!      A few tips for common interpreted file types:</span>
+<span class="c">!!        o shell script:  #@###identification info</span>
+<span class="c">!!        o HTML:   &lt;!--&quot;@###identification info&quot;--&gt;</span>
+<span class="c">!!</span>
+<span class="c">!!##EXIT STATUS</span>
+<span class="c">!!      The following exit values are returned:</span>
+<span class="c">!!         0     Any matches were found.</span>
+<span class="c">!!         1     No matches found.</span>
+<span class="c">!!</span>
+<span class="c">!!##ENVIRONMENT VARIABLES</span>
+<span class="c">!!</span>
+<span class="c">!!##AUTHOR</span>
+<span class="c">!!      John S. Urban</span>
+<span class="c">!!##LICENSE</span>
+<span class="c">!!      Public Domain</span>
+<span class="c">!!</span>
+<span class="c">!!##SEE ALSO</span>
+<span class="c">!!    The following commands can help identify file contents</span>
+<span class="c">!!      file(1), strings(1), nm(1), ldd(1), cpp(1), fpp(1),</span>
+<span class="c">!!      ident(1), ar(1), objdump(1), ranlib(1),</span>
+<span class="c">!!      [if SCCS installed ] sccs(1), sccs-admin(1), sccs-get(1), ...</span>
+<span class="c">!!</span>
+<span class="c">!!    Related topics: schema, IDL (Information Description Language), ...</span>
+<span class="c">!!</span>
+<span class="c">!!##BUGS</span>
+<span class="c">!!      There is a remote possibility that a spurious occurrence of the &quot;@###&quot;</span>
+<span class="c">!!      pattern could be found by what(1).</span>
+<span class="c">!!</span>
+<span class="c">!!      If standard input is processed it must be a text file with line width less</span>
+<span class="c">!!      than 4,096 characters or errors may occur.</span>
+<span class="c">!!</span>
+<span class="c">!!      The length of the file arguments may be limited depending on what</span>
+<span class="c">!!      command-line argument parser is used.</span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="c">!  strings contain prefix @(#) and suffix &quot; so strings should show up via what(1) command; trimmed when printed by this procedure</span>
+<span class="c">!  NOTES:</span>
+<span class="c">!  developer-supplied information (usually)</span>
+<span class="c">!  Reference: Dublin Core Metadata Element Set (supplemented)</span>
+
+<span class="c">!  used to tie this code (and compilation) to a unique key that can be used in QA records, as a database key, ...</span>
+<span class="c">!  for IDENTIFIER depending on what key type you use, it may be able to extract the time the key was generated from the key value</span>
+
+<span class="c">!  typical STATUS valus ar development, test, production</span>
+<span class="c">!  DATE    can be of various types, such as creation, modification, registration</span>
+
+<span class="c">!  OTHERS:</span>
+<span class="c">!  Birth        : 2015-07-12 12:24:04 Change: 2015-07-19 23:33:46</span>
+
+<span class="c">!  compilation host:</span>
+<span class="c">!  ORIGIN is typically stat(3c)/stat(1),file(1),ls(1) info. at time of compilation, might need INCLUDE/MODULE/PREPROCESSOR use</span>
+
+<span class="c">!  SOURCE IS typically cpp(1) macro __FILE__</span>
+
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="n">version_text</span><span class="o">=</span><span class="p">[</span> <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">LEN</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span> <span class="kd">::</span> <span class="p">&amp;</span>
+<span class="s1">&#39;@(#)TITLE            :: what(1f)&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)DATE             :: 2015/07/17  1:23:28 PM&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)DESCRIPTION      :: extract SCCS-style metadata from files&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)SUBJECT          :: metadata,SCCS identification string&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)TYPE             :: executable command&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)IDENTIFIER       :: VERSION=2.0.0 UUID=cc787735-fed2-42d3-8cb2-515ea7599873&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)STATUS           :: PRODUCTION 20160202&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)CREATOR          :: John S. Urban&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)PUBLISHER        :: CONTACT=urbanjost@comcast.net&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)CONTRIBUTOR      :: &gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)RIGHTS           :: Public Domain&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)FORMAT           :: Fortran program&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)SOURCE           :: LIBRARY/libGPF/EXE/WHAT/what.FF&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)LANGUAGE         :: english&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)RELATION         :: ISO/IEC DIS 9945-2:1992, Information technology - POSIX-Part 2: Shell and Utilities&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)COVERAGE         :: ORIGIN=Pennsylvania,USA ORIGIN_TGN=7007710&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;@(#)ORIGIN           :: CYGWIN_NT-6.3 buzz 2.0.3(0.287/5/3) 2015-06-03 13:57 x86_64 Cygwin&gt; !uname(3c)&gt;&#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">]</span>
+<span class="k">end subroutine </span><span class="n">setup</span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="k">function </span><span class="n">process_file</span><span class="p">()</span> <span class="k">RESULT</span> <span class="p">(</span><span class="n">ifound_total_back</span><span class="p">)</span>
+<span class="c">! @(#)process_file - process the supplied file as a stream, and write output to stdout.</span>
+   <span class="k">implicit none</span>
+<span class="k">   </span><span class="kt">integer</span><span class="p">,</span><span class="k">save</span>       <span class="kd">::</span> <span class="n">ifound_total</span><span class="o">=</span><span class="mi">0</span>          <span class="c">! total number of SCCS ID strings found in current program execution</span>
+   <span class="kt">integer</span>            <span class="kd">::</span> <span class="n">ifound_total_back</span>       <span class="c">! copy of ifound_total returned (one compiler confused by returning saved value)</span>
+   <span class="kt">character</span>          <span class="kd">::</span> <span class="n">c</span>                       <span class="c">! current character read</span>
+   <span class="kt">integer</span><span class="p">,</span><span class="k">parameter</span>  <span class="kd">::</span> <span class="n">got_nothing</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">got_at</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">got_open</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">got_hash</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">got_all</span><span class="o">=</span><span class="mi">4</span>
+   <span class="kt">integer</span>            <span class="kd">::</span> <span class="n">status</span>                  <span class="c">! use to determine if found SCCS ID string</span>
+   <span class="kt">integer</span>            <span class="kd">::</span> <span class="n">ios</span>                     <span class="c">! hold I/O error flag</span>
+   <span class="kt">integer</span>            <span class="kd">::</span> <span class="n">icount</span>                  <span class="c">! number of characters read from file</span>
+   <span class="kt">integer</span>            <span class="kd">::</span> <span class="n">ifound_in_this_file</span>     <span class="c">! number of SCCS ID strings found in current file</span>
+   <span class="kt">logical</span>            <span class="kd">::</span> <span class="n">reset</span>
+
+   <span class="n">status</span> <span class="o">=</span> <span class="n">got_nothing</span>                          <span class="c">! what part of @(#) found so far</span>
+   <span class="n">icount</span><span class="o">=</span><span class="mi">0</span>                                      <span class="c">! number of characters read in this file</span>
+   <span class="n">ifound_in_this_file</span><span class="o">=</span><span class="mi">0</span>                         <span class="c">! number of ID strings found in this file</span>
+   <span class="n">reset</span><span class="o">=</span><span class="p">.</span><span class="n">true</span><span class="p">.</span>
+
+   <span class="k">if</span><span class="p">(</span><span class="n">html</span><span class="p">.</span><span class="nb">or</span><span class="p">.</span><span class="n">table</span><span class="p">)</span><span class="k">then</span>                         <span class="c">! if writing a table write out HTML</span>
+      <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a)&#39;</span><span class="p">)</span><span class="s1">&#39;&lt;td&gt;&#39;</span>
+   <span class="k">endif</span>
+
+<span class="k">   </span><span class="n">LOOK_FOR_PREFIX</span><span class="p">:</span> <span class="k">do</span>                           <span class="c">! loop through read of file one character at a time</span>
+
+      <span class="k">select case</span><span class="p">(</span><span class="n">fd</span><span class="p">)</span>
+      <span class="k">case</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>                                    <span class="c">! cannot find a way to read from pre-assigned stdin as a stream so far in Fortran</span>
+         <span class="k">read</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a1)&#39;</span><span class="p">,</span><span class="n">iostat</span><span class="o">=</span><span class="n">ios</span><span class="p">,</span><span class="n">advance</span><span class="o">=</span><span class="s1">&#39;no&#39;</span><span class="p">)</span> <span class="n">c</span>   <span class="c">! read stdin with non-advancing I/O as next-best approach</span>
+         <span class="k">if</span><span class="p">(</span><span class="nb">is_iostat_eor</span><span class="p">(</span><span class="n">ios</span><span class="p">))</span><span class="k">then</span>              <span class="c">! if get end-of-record status pretend got char(10) from a stream</span>
+            <span class="n">c</span><span class="o">=</span><span class="nb">char</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+            <span class="n">ios</span><span class="o">=</span><span class="mi">0</span>
+         <span class="k">endif</span>
+<span class="k">      case </span><span class="n">default</span>                               <span class="c">! read character from stream</span>
+         <span class="k">call </span><span class="n">getnextchar</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">ios</span><span class="p">,</span><span class="n">reset</span><span class="p">)</span>
+         <span class="c">!read(fd,iostat=ios) c</span>
+      <span class="k">end select</span>
+
+<span class="k">      if</span><span class="p">(</span> <span class="n">ios</span><span class="p">.</span><span class="n">ne</span><span class="p">.</span><span class="mi">0</span> <span class="p">)</span><span class="k">exit </span><span class="n">LOOK_FOR_PREFIX</span>         <span class="c">! stop on error or end-of-file</span>
+
+      <span class="n">icount</span><span class="o">=</span><span class="n">icount</span><span class="o">+</span><span class="mi">1</span>                            <span class="c">! increment count of characters read</span>
+
+      <span class="k">select case</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+      <span class="k">case</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">)</span>
+         <span class="n">status</span> <span class="o">=</span> <span class="n">got_at</span>
+      <span class="k">case</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
+         <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">got_at</span><span class="p">)</span> <span class="n">status</span> <span class="o">=</span> <span class="n">got_open</span>
+      <span class="k">case</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">)</span>
+         <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">got_open</span><span class="p">)</span> <span class="n">status</span> <span class="o">=</span> <span class="n">got_hash</span>
+      <span class="k">case</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
+         <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">got_hash</span><span class="p">)</span> <span class="k">then</span>           <span class="c">! got all of prefix so start outputting characters</span>
+            <span class="n">status</span><span class="o">=</span><span class="n">got_all</span>
+                                                <span class="c">! Output tab and ident string followed by a new line.</span>
+            <span class="n">ifound_total</span> <span class="o">=</span> <span class="n">ifound_total</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="n">ifound_in_this_file</span> <span class="o">=</span> <span class="n">ifound_in_this_file</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a)&#39;</span><span class="p">,</span><span class="n">advance</span><span class="o">=</span><span class="s1">&#39;no&#39;</span><span class="p">)</span><span class="nb">achar</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="c">! output tab before string being found</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">debug</span><span class="p">)</span><span class="k">then</span>
+<span class="k">               write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;*process_file*: FOUND METADATA STARTING AT ICOUNT =&#39;</span><span class="p">,</span><span class="n">ICOUNT</span>
+            <span class="k">endif</span>
+<span class="k">            </span><span class="n">OUTPUT</span><span class="p">:</span> <span class="k">do</span>
+
+<span class="k">               if</span><span class="p">(</span><span class="n">fd</span><span class="p">.</span><span class="n">eq</span><span class="p">.</span><span class="mi">5</span><span class="p">)</span><span class="k">then</span>
+<span class="k">                  read</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a1)&#39;</span><span class="p">,</span><span class="n">iostat</span><span class="o">=</span><span class="n">ios</span><span class="p">,</span><span class="n">advance</span><span class="o">=</span><span class="s1">&#39;no&#39;</span><span class="p">)</span> <span class="n">c</span>
+                  <span class="k">if</span><span class="p">(</span><span class="nb">is_iostat_eor</span><span class="p">(</span><span class="n">ios</span><span class="p">))</span><span class="k">then</span>
+<span class="k">                     </span><span class="n">c</span><span class="o">=</span><span class="nb">char</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+                    <span class="n">ios</span><span class="o">=</span><span class="mi">0</span>
+                  <span class="k">endif</span>
+<span class="k">               else</span>
+<span class="k">                  call </span><span class="n">getnextchar</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">ios</span><span class="p">,</span><span class="n">reset</span><span class="p">)</span>
+                  <span class="c">!read(fd,iostat=ios) c</span>
+               <span class="k">endif</span>
+
+<span class="k">               if</span><span class="p">(</span> <span class="n">ios</span><span class="p">.</span><span class="n">ne</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span><span class="k">then</span>
+<span class="k">                   exit </span><span class="n">LOOK_FOR_PREFIX</span>
+               <span class="k">endif</span>
+
+<span class="k">               </span><span class="n">icount</span><span class="o">=</span><span class="n">icount</span><span class="o">+</span><span class="mi">1</span>
+
+               <span class="k">select case</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+               <span class="k">case</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span><span class="s1">&#39;&gt;&#39;</span><span class="p">,</span><span class="s1">&#39;\&#39;)</span>
+<span class="s1">                  exit OUTPUT</span>
+<span class="s1">               case(:achar(31),achar(127):)     ! end on non-printable character</span>
+<span class="s1">                  exit OUTPUT</span>
+<span class="s1">               case default</span>
+<span class="s1">                  write(*,&#39;</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="s1">&#39;,advance=&#39;</span><span class="n">no</span><span class="s1">&#39;)c</span>
+<span class="s1">               end select</span>
+
+<span class="s1">            enddo OUTPUT</span>
+
+<span class="s1">            if(html.or.table)then</span>
+<span class="s1">               write (*, &#39;</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="s1">&#39;)&#39;</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="s1">&#39;          ! newline</span>
+<span class="s1">            else</span>
+<span class="s1">               write(*,*)                       ! newline</span>
+<span class="s1">            endif</span>
+
+<span class="s1">            if (stop_on_first)then</span>
+<span class="s1">               exit LOOK_FOR_PREFIX</span>
+<span class="s1">            endif</span>
+
+<span class="s1">         endif</span>
+<span class="s1">     case default</span>
+<span class="s1">        status = got_nothing                    ! start looking for new prefix</span>
+<span class="s1">     end select</span>
+
+<span class="s1">   enddo LOOK_FOR_PREFIX</span>
+
+<span class="s1">   if(html.or.table)then</span>
+<span class="s1">      write(*,&#39;</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="s1">&#39;)&#39;</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span><span class="s1">&#39;</span>
+<span class="s1">   endif</span>
+
+<span class="s1">   if(ifound_in_this_file.eq.0.and.stop_on_first)then       ! need a line advance because no SCCS ID string found</span>
+<span class="s1">      write(*,*)</span>
+<span class="s1">   endif</span>
+
+<span class="s1">   if(debug)then</span>
+<span class="s1">      write(*,*)&#39;</span><span class="o">*</span><span class="n">process_file</span><span class="o">*</span><span class="p">:</span> <span class="n">ICOUNT</span>       <span class="o">=</span><span class="s1">&#39;,ICOUNT</span>
+<span class="s1">      write(*,*)&#39;</span><span class="o">*</span><span class="n">process_file</span><span class="o">*</span><span class="p">:</span> <span class="n">STOP_ON_FIRST</span><span class="o">=</span><span class="s1">&#39;,STOP_ON_FIRST</span>
+<span class="s1">      write(*,*)&#39;</span><span class="o">*</span><span class="n">process_file</span><span class="o">*</span><span class="p">:</span> <span class="n">STATUS</span>       <span class="o">=</span><span class="s1">&#39;,STATUS</span>
+<span class="s1">      write(*,*)&#39;</span><span class="o">*</span><span class="n">process_file</span><span class="o">*</span><span class="p">:</span> <span class="n">FOUND</span>        <span class="o">=</span><span class="s1">&#39;,FOUND</span>
+<span class="s1">   endif</span>
+
+<span class="s1">   ifound_total_back=ifound_total</span>
+
+<span class="s1">end function process_file</span>
+<span class="s1">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="s1">subroutine getnextchar(fd,c,ios,reset)</span>
+<span class="s1">! replace &quot;read(fd,iostat=ios) c&quot; because gfortran on CygWin sixty times slower with plain read (no system buffering?)</span>
+<span class="s1">! quick buffering read</span>
+<span class="s1">implicit none</span>
+
+<span class="s1">integer,intent(in)          :: fd</span>
+<span class="s1">character,intent(out)       :: c</span>
+<span class="s1">integer,intent(out)         :: ios</span>
+<span class="s1">logical,intent(inout)       :: reset</span>
+
+<span class="s1">!integer,parameter           :: bufsize=65536</span>
+<span class="s1">integer,parameter           :: bufsize=1048576</span>
+<span class="s1">character(len=1),save       :: buff(bufsize)</span>
+<span class="s1">integer,save                :: point=0</span>
+<span class="s1">integer,save                :: filepoint=1</span>
+<span class="s1">integer,save                :: sz=bufsize</span>
+
+<span class="s1">ios=0</span>
+
+<span class="s1">if(reset)then</span>
+<span class="s1">   filepoint=1</span>
+<span class="s1">   point=0</span>
+<span class="s1">   reset=.false.</span>
+<span class="s1">   buff=&#39;</span> <span class="s1">&#39;</span>
+<span class="s1">   sz=bufsize</span>
+<span class="s1">   if(debug)then</span>
+<span class="s1">           write(*,*)&#39;</span><span class="o">*</span><span class="n">getnextchar</span><span class="o">*</span> <span class="n">reset</span><span class="s1">&#39;</span>
+<span class="s1">   endif</span>
+<span class="s1">endif</span>
+
+<span class="s1">100 continue</span>
+<span class="s1">select case(point)</span>
+<span class="s1">case(0)                                            ! read a buffer</span>
+<span class="s1">   read(fd,iostat=ios,pos=filepoint) buff(1:sz)</span>
+<span class="s1">   if(is_iostat_end(ios))then                      ! this is the last buffer</span>
+<span class="s1">      if(sz.ne.1)then                              ! try again with a smaller buffer</span>
+<span class="s1">         sz=sz/2</span>
+<span class="s1">         sz=max(1,sz)</span>
+<span class="s1">         goto 100</span>
+<span class="s1">      endif</span>
+<span class="s1">   elseif(ios.eq.0)then                            ! no error occurred so successfully read a buffer</span>
+<span class="s1">      c=buff(1)</span>
+<span class="s1">      filepoint=filepoint+sz</span>
+<span class="s1">      point=sz-1</span>
+<span class="s1">   endif</span>
+<span class="s1">case(1:)                                           ! getting a character from a previous buffer</span>
+<span class="s1">   point=point-1</span>
+<span class="s1">   c=buff(sz-point)</span>
+<span class="s1">case default</span>
+<span class="s1">   write(*,*)&#39;</span><span class="o">*</span><span class="n">getnextchar</span><span class="o">*</span> <span class="n">internal</span> <span class="n">error</span> <span class="s1">&#39;</span>
+<span class="s1">   read(fd,iostat=ios) c</span>
+<span class="s1">end select</span>
+<span class="s1">! assume if IOS is not zero, not called again until new file is started</span>
+<span class="s1">!write(*,*)&#39;</span><span class="n">JSU</span><span class="p">:</span> <span class="n">BOT</span> <span class="p">[</span><span class="s1">&#39;//c//&#39;</span><span class="p">]</span> <span class="n">POINT</span><span class="o">=</span><span class="s1">&#39;,point,&#39;</span> <span class="n">IOS</span><span class="o">=</span><span class="s1">&#39;,ios,&#39;</span> <span class="n">FILEPOINT</span><span class="o">=</span><span class="err">&#39;</span><span class="p">,</span><span class="n">filepoint</span>
+   <span class="k">if</span><span class="p">(</span><span class="n">ios</span><span class="p">.</span><span class="n">ne</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span><span class="k">then</span>
+<span class="k">      </span><span class="n">filepoint</span><span class="o">=</span><span class="mi">1</span>
+      <span class="n">point</span><span class="o">=</span><span class="mi">0</span>
+      <span class="n">sz</span><span class="o">=</span><span class="n">bufsize</span>
+   <span class="k">endif</span>
+<span class="k">end subroutine </span><span class="n">getnextchar</span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="k">end program </span><span class="n">pedigree</span>
+</pre></div>
+
+    </section>
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2022 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2022-06-26 22:53  
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> what was developed by John S. Urban</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>
