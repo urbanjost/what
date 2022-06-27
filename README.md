@@ -1,4 +1,4 @@
-### [fpm-tools](https://github.com/search?q="fpm-tools"%20in:topic%20language:fortran):[what](https://urbanjost.github.io/what/)
+### [fpm-tools](https://github.com/search?q="fpm-tools"%20in:topic%20language:fortran):[what](https://urbanjost.github.io/what/what.1.html)
 
 Build what(1) using fpm(1):
 ```bash
